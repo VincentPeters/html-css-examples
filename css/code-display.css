@@ -1,0 +1,284 @@
+/* === EXAMPLE CONTAINERS === */
+.example-section {
+  margin-bottom: 2.5rem;
+}
+
+.example-section h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+}
+
+.example-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 0.5rem;
+}
+
+.example-section p {
+  color: #495057;
+  margin-bottom: 0.75rem;
+  max-width: 75ch;
+}
+
+/* Split layout: result + code side by side */
+.example-split {
+  display: flex;
+  gap: 0;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: #fff;
+}
+
+.example-result {
+  flex: 1;
+  padding: 1.25rem;
+  min-width: 0;
+  border-right: 1px solid #dee2e6;
+}
+
+.example-code {
+  flex: 1;
+  min-width: 0;
+  overflow: auto;
+}
+
+/* Label badges */
+.example-result::before,
+.example-code::before {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.example-result::before {
+  content: "Resultaat";
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.example-code::before {
+  content: "Code";
+  background-color: #3d3d5c;
+  color: #e2e8f0;
+  margin: 1rem 0 0.5rem 1rem;
+}
+
+/* Stacked on mobile */
+@media (max-width: 768px) {
+  .example-split {
+    flex-direction: column;
+  }
+
+  .example-result {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+}
+
+/* === CODE BLOCKS (DARK THEME) === */
+.example-code pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: #2d2d4e;
+  color: #e2e8f0;
+  font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+.example-code pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Inline code */
+code {
+  background-color: #e9ecef;
+  color: #d63384;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+}
+
+/* === PRISM.JS OVERRIDES === */
+pre[class*="language-"] {
+  margin: 0;
+  border-radius: 0;
+  background-color: #2d2d4e;
+}
+
+code[class*="language-"] {
+  background: none;
+  color: #e2e8f0;
+  padding: 0;
+}
+
+.token.tag {
+  color: #ff7b72;
+}
+
+.token.attr-name {
+  color: #79c0ff;
+}
+
+.token.attr-value {
+  color: #a5d6ff;
+}
+
+.token.punctuation {
+  color: #8b949e;
+}
+
+.token.comment {
+  color: #8b949e;
+  font-style: italic;
+}
+
+.token.selector {
+  color: #7ee787;
+}
+
+.token.property {
+  color: #79c0ff;
+}
+
+.token.value,
+.token.string {
+  color: #a5d6ff;
+}
+
+.token.keyword {
+  color: #ff7b72;
+}
+
+.token.function {
+  color: #d2a8ff;
+}
+
+.token.number {
+  color: #79c0ff;
+}
+
+/* === RESULT-ONLY or CODE-ONLY blocks === */
+.example-result-only {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+}
+
+.example-result-only::before {
+  content: "Resultaat";
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.example-code-only {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.example-code-only::before {
+  content: "Code";
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  background-color: #3d3d5c;
+  color: #e2e8f0;
+  margin: 1rem 0 0.5rem 1rem;
+}
+
+.example-code-only pre {
+  margin: 0;
+  padding: 1rem;
+  background-color: #2d2d4e;
+  color: #e2e8f0;
+  font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  overflow-x: auto;
+}
+
+/* === COMPARISON BOXES (for CSS demos) === */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.compare-box {
+  background: #fff;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.compare-box .label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* === NOTES / TIPS === */
+.note {
+  background-color: #e7f5ff;
+  border-left: 4px solid #0077b6;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+}
+
+.note strong {
+  color: #0077b6;
+}
+
+.warning {
+  background-color: #fff3cd;
+  border-left: 4px solid #e85d04;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+}
+
+.warning strong {
+  color: #e85d04;
+}
