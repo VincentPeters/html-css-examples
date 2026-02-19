@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eenheden - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../html/01-basis-template.html">Basis Template</a></li>
+            <li><a href="../html/02-koppen.html">Koppen</a></li>
+            <li><a href="../html/03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="../html/04-lijsten.html">Lijsten</a></li>
+            <li><a href="../html/05-links.html">Links</a></li>
+            <li><a href="../html/06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="../html/07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="../html/08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="../html/09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="02-selectors.html">Selectors</a></li>
+            <li><a href="03-box-model.html">Box Model</a></li>
+            <li><a href="04-typografie.html">Typografie</a></li>
+            <li><a href="05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="06-grootte.html">Grootte</a></li>
+            <li><a href="07-ruimte.html">Ruimte</a></li>
+            <li><a href="08-randen.html">Randen</a></li>
+            <li><a href="09-kleuren.html">Kleuren</a></li>
+            <li><a href="10-eenheden.html">Eenheden</a></li>
+            <li><a href="11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>&rsaquo;</span> CSS <span>&rsaquo;</span> Eenheden
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Eenheden</h1>
+    <p class="page-description">CSS kent verschillende eenheden voor het bepalen van groottes.</p>
+
+    <!-- Voorbeeld 1: px -->
+    <section class="example-section">
+      <h2>px (pixels)</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .eenh-px-demo {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+            }
+            .eenh-px-item {
+              color: #1a1a2e;
+              font-weight: 600;
+            }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">Vaste grootte, ongeacht context:</p>
+          <div class="eenh-px-demo">
+            <span class="eenh-px-item" style="font-size: 12px;">Tekst op 12px</span>
+            <span class="eenh-px-item" style="font-size: 16px;">Tekst op 16px</span>
+            <span class="eenh-px-item" style="font-size: 24px;">Tekst op 24px</span>
+            <span class="eenh-px-item" style="font-size: 32px;">Tekst op 32px</span>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* px = absolute eenheid */
+.klein  { font-size: 12px; }
+.normal { font-size: 16px; }
+.groot  { font-size: 24px; }
+.groter { font-size: 32px; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 2: % -->
+    <section class="example-section">
+      <h2>% (percentage)</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .eenh-pct-container {
+              border: 2px solid #0077b6;
+              padding: 0.75rem;
+              border-radius: 6px;
+              background-color: #f8f9fa;
+            }
+            .eenh-pct-bar {
+              background-color: #0077b6;
+              color: #fff;
+              padding: 0.5rem 0.75rem;
+              margin-bottom: 0.5rem;
+              border-radius: 4px;
+              font-size: 0.8rem;
+              font-weight: 600;
+            }
+            .eenh-pct-bar:last-child {
+              margin-bottom: 0;
+            }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">Relatief aan het ouder-element (blauwe rand):</p>
+          <div class="eenh-pct-container">
+            <div class="eenh-pct-bar" style="width: 25%;">25%</div>
+            <div class="eenh-pct-bar" style="width: 50%;">50%</div>
+            <div class="eenh-pct-bar" style="width: 75%;">75%</div>
+            <div class="eenh-pct-bar" style="width: 100%;">100%</div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* % = relatief aan ouder-element */
+.kwart     { width: 25%; }
+.half      { width: 50%; }
+.driekwart { width: 75%; }
+.vol       { width: 100%; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 3: em -->
+    <section class="example-section">
+      <h2>em (relatief aan ouder)</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .eenh-em-parent {
+              font-size: 16px;
+              border: 2px solid #e85d04;
+              padding: 0.75rem;
+              border-radius: 6px;
+              background-color: #fff3cd;
+            }
+            .eenh-em-child {
+              font-size: 1.5em;
+              border: 2px solid #d63384;
+              padding: 0.5rem;
+              margin-top: 0.5rem;
+              border-radius: 4px;
+              background-color: #f8d7da;
+            }
+            .eenh-em-grandchild {
+              font-size: 1.5em;
+              border: 2px solid #6f42c1;
+              padding: 0.5rem;
+              margin-top: 0.5rem;
+              border-radius: 4px;
+              background-color: #e8d5f5;
+            }
+            .eenh-em-label {
+              font-weight: 700;
+              display: block;
+            }
+            .eenh-em-size {
+              font-size: 0.7em;
+              color: #6c757d;
+            }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">em stapelt op bij nesting (vermenigvuldigt):</p>
+          <div class="eenh-em-parent">
+            <span class="eenh-em-label">Ouder: 16px</span>
+            <span class="eenh-em-size">(basis font-size: 16px)</span>
+            <div class="eenh-em-child">
+              <span class="eenh-em-label">Kind: 1.5em = 24px</span>
+              <span class="eenh-em-size">(16px &times; 1.5 = 24px)</span>
+              <div class="eenh-em-grandchild">
+                <span class="eenh-em-label">Kleinkind: 1.5em = 36px</span>
+                <span class="eenh-em-size">(24px &times; 1.5 = 36px)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* em = relatief aan ouder font-size */
+/* em stapelt op bij nesting! */
+
+.ouder {
+  font-size: 16px;
+}
+
+.kind {
+  font-size: 1.5em; /* 16 &times; 1.5 = 24px */
+}
+
+.kleinkind {
+  font-size: 1.5em; /* 24 &times; 1.5 = 36px */
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 4: rem -->
+    <section class="example-section">
+      <h2>rem (relatief aan root)</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .eenh-rem-parent {
+              font-size: 16px;
+              border: 2px solid #2d6a4f;
+              padding: 0.75rem;
+              border-radius: 6px;
+              background-color: #d4edda;
+            }
+            .eenh-rem-child {
+              font-size: 1.5rem;
+              border: 2px solid #0077b6;
+              padding: 0.5rem;
+              margin-top: 0.5rem;
+              border-radius: 4px;
+              background-color: #caf0f8;
+            }
+            .eenh-rem-grandchild {
+              font-size: 1.5rem;
+              border: 2px solid #0077b6;
+              padding: 0.5rem;
+              margin-top: 0.5rem;
+              border-radius: 4px;
+              background-color: #e7f5ff;
+            }
+            .eenh-rem-label {
+              font-weight: 700;
+              display: block;
+            }
+            .eenh-rem-size {
+              font-size: 0.7em;
+              color: #6c757d;
+            }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">rem blijft consistent, ongeacht nesting:</p>
+          <div class="eenh-rem-parent">
+            <span class="eenh-rem-label">Ouder: 16px</span>
+            <span class="eenh-rem-size">(basis font-size: 16px)</span>
+            <div class="eenh-rem-child">
+              <span class="eenh-rem-label">Kind: 1.5rem = 24px</span>
+              <span class="eenh-rem-size">(root 16px &times; 1.5 = 24px)</span>
+              <div class="eenh-rem-grandchild">
+                <span class="eenh-rem-label">Kleinkind: 1.5rem = 24px</span>
+                <span class="eenh-rem-size">(root 16px &times; 1.5 = 24px, niet 36px!)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* rem = relatief aan ROOT font-size */
+/* rem stapelt NIET op bij nesting */
+
+.ouder {
+  font-size: 16px;
+}
+
+.kind {
+  font-size: 1.5rem; /* 16 &times; 1.5 = 24px */
+}
+
+.kleinkind {
+  font-size: 1.5rem; /* 16 &times; 1.5 = 24px */
+  /* NIET 36px zoals bij em! */
+}</code></pre>
+        </div>
+      </div>
+      <div class="note">
+        <strong>Tip:</strong> Gebruik <code>rem</code> voor consistente groottes en <code>em</code> wanneer je wilt dat de grootte relatief is aan het ouder-element.
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="09-kleuren.html" class="prev">&larr; Kleuren</a>
+      <a href="11-reset-box-sizing.html" class="next">Reset &amp; Box-sizing &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

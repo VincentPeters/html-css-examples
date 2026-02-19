@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koppen - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-basis-template.html">Basis Template</a></li>
+            <li><a href="02-koppen.html">Koppen</a></li>
+            <li><a href="03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="04-lijsten.html">Lijsten</a></li>
+            <li><a href="05-links.html">Links</a></li>
+            <li><a href="06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="../css-voorbeelden/02-selectors.html">Selectors</a></li>
+            <li><a href="../css-voorbeelden/03-box-model.html">Box Model</a></li>
+            <li><a href="../css-voorbeelden/04-typografie.html">Typografie</a></li>
+            <li><a href="../css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="../css-voorbeelden/06-grootte.html">Grootte</a></li>
+            <li><a href="../css-voorbeelden/07-ruimte.html">Ruimte</a></li>
+            <li><a href="../css-voorbeelden/08-randen.html">Randen</a></li>
+            <li><a href="../css-voorbeelden/09-kleuren.html">Kleuren</a></li>
+            <li><a href="../css-voorbeelden/10-eenheden.html">Eenheden</a></li>
+            <li><a href="../css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>›</span> HTML <span>›</span> Koppen
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Koppen</h1>
+    <p class="page-description">HTML heeft zes niveaus van koppen, van h1 (belangrijkst) tot h6 (minst belangrijk).</p>
+
+    <section class="example-section">
+      <h2>Alle Kopniveaus</h2>
+      <p>HTML biedt zes niveaus van koppen. De <code>&lt;h1&gt;</code> is het grootst en belangrijkst, de <code>&lt;h6&gt;</code> het kleinst.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <h1>Kop niveau 1</h1>
+          <h2>Kop niveau 2</h2>
+          <h3>Kop niveau 3</h3>
+          <h4>Kop niveau 4</h4>
+          <h5>Kop niveau 5</h5>
+          <h6>Kop niveau 6</h6>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;h1&gt;Kop niveau 1&lt;/h1&gt;
+&lt;h2&gt;Kop niveau 2&lt;/h2&gt;
+&lt;h3&gt;Kop niveau 3&lt;/h3&gt;
+&lt;h4&gt;Kop niveau 4&lt;/h4&gt;
+&lt;h5&gt;Kop niveau 5&lt;/h5&gt;
+&lt;h6&gt;Kop niveau 6&lt;/h6&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Correcte Hi&euml;rarchie</h2>
+      <p>Koppen moeten een logische structuur volgen. Gebruik <code>&lt;h1&gt;</code> voor de paginatitel, <code>&lt;h2&gt;</code> voor secties en <code>&lt;h3&gt;</code> voor subsecties.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <h1>Mijn Website</h1>
+          <h2>Over Ons</h2>
+          <h3>Ons Team</h3>
+          <h3>Onze Missie</h3>
+          <h2>Diensten</h2>
+          <h3>Webdesign</h3>
+          <h3>Ontwikkeling</h3>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;h1&gt;Mijn Website&lt;/h1&gt;
+
+&lt;h2&gt;Over Ons&lt;/h2&gt;
+&lt;h3&gt;Ons Team&lt;/h3&gt;
+&lt;h3&gt;Onze Missie&lt;/h3&gt;
+
+&lt;h2&gt;Diensten&lt;/h2&gt;
+&lt;h3&gt;Webdesign&lt;/h3&gt;
+&lt;h3&gt;Ontwikkeling&lt;/h3&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">
+      <p><strong>Tip:</strong> Gebruik slechts &eacute;&eacute;n <code>&lt;h1&gt;</code> per pagina en sla geen niveaus over. Ga bijvoorbeeld niet van <code>&lt;h2&gt;</code> direct naar <code>&lt;h4&gt;</code>.</p>
+    </div>
+
+    <nav class="page-nav">
+      <a href="01-basis-template.html" class="prev">&larr; Basis Template</a>
+      <a href="03-tekst-elementen.html" class="next">Tekst Elementen &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tekst Elementen - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-basis-template.html">Basis Template</a></li>
+            <li><a href="02-koppen.html">Koppen</a></li>
+            <li><a href="03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="04-lijsten.html">Lijsten</a></li>
+            <li><a href="05-links.html">Links</a></li>
+            <li><a href="06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="../css-voorbeelden/02-selectors.html">Selectors</a></li>
+            <li><a href="../css-voorbeelden/03-box-model.html">Box Model</a></li>
+            <li><a href="../css-voorbeelden/04-typografie.html">Typografie</a></li>
+            <li><a href="../css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="../css-voorbeelden/06-grootte.html">Grootte</a></li>
+            <li><a href="../css-voorbeelden/07-ruimte.html">Ruimte</a></li>
+            <li><a href="../css-voorbeelden/08-randen.html">Randen</a></li>
+            <li><a href="../css-voorbeelden/09-kleuren.html">Kleuren</a></li>
+            <li><a href="../css-voorbeelden/10-eenheden.html">Eenheden</a></li>
+            <li><a href="../css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>›</span> HTML <span>›</span> Tekst Elementen
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Tekst Elementen</h1>
+    <p class="page-description">De belangrijkste HTML-elementen voor het opmaken van tekst.</p>
+
+    <section class="example-section">
+      <h2>Paragrafen &lt;p&gt;</h2>
+      <p>Het <code>&lt;p&gt;</code>-element wordt gebruikt om alinea's tekst te maken. De browser voegt automatisch witruimte toe boven en onder elke paragraaf.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <p>Dit is de eerste paragraaf. De browser plaatst automatisch ruimte tussen paragrafen, zodat de tekst overzichtelijk blijft.</p>
+          <p>Dit is de tweede paragraaf. Elke paragraaf begint op een nieuwe regel met wat ruimte ertussen.</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;p&gt;Dit is de eerste paragraaf. De browser plaatst
+automatisch ruimte tussen paragrafen, zodat de
+tekst overzichtelijk blijft.&lt;/p&gt;
+
+&lt;p&gt;Dit is de tweede paragraaf. Elke paragraaf
+begint op een nieuwe regel met wat ruimte
+ertussen.&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Vetgedrukt &lt;strong&gt;</h2>
+      <p>Het <code>&lt;strong&gt;</code>-element maakt tekst vetgedrukt en geeft aan dat de tekst belangrijk is.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <p>Dit is <strong>heel belangrijk</strong> om te onthouden.</p>
+          <p><strong>Let op:</strong> vergeet niet je werk op te slaan!</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;p&gt;Dit is &lt;strong&gt;heel belangrijk&lt;/strong&gt; om te onthouden.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Let op:&lt;/strong&gt; vergeet niet je werk op te slaan!&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Cursief &lt;em&gt;</h2>
+      <p>Het <code>&lt;em&gt;</code>-element maakt tekst cursief en geeft nadruk aan.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <p>Je moet <em>altijd</em> je code testen.</p>
+          <p>Het woord <em>semantisch</em> betekent 'met betekenis'.</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;p&gt;Je moet &lt;em&gt;altijd&lt;/em&gt; je code testen.&lt;/p&gt;
+
+&lt;p&gt;Het woord &lt;em&gt;semantisch&lt;/em&gt; betekent 'met betekenis'.&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Regelovergang &lt;br&gt;</h2>
+      <p>Het <code>&lt;br&gt;</code>-element forceert een regelovergang binnen dezelfde paragraaf, zonder extra witruimte.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <p>Eerste regel<br>Tweede regel<br>Derde regel</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;p&gt;Eerste regel&lt;br&gt;Tweede regel&lt;br&gt;Derde regel&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Gecombineerd</h2>
+      <p>Je kunt <code>&lt;strong&gt;</code> en <code>&lt;em&gt;</code> combineren binnen een paragraaf.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <p>Welkom bij de cursus <strong>HTML &amp; CSS</strong>. In deze cursus leer je <em>stap voor stap</em> hoe je <strong>professionele webpagina's</strong> maakt. Het is <strong><em>essentieel</em></strong> dat je regelmatig oefent.</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;p&gt;Welkom bij de cursus &lt;strong&gt;HTML &amp;amp; CSS&lt;/strong&gt;.
+In deze cursus leer je &lt;em&gt;stap voor stap&lt;/em&gt;
+hoe je &lt;strong&gt;professionele webpagina's&lt;/strong&gt;
+maakt. Het is &lt;strong&gt;&lt;em&gt;essentieel&lt;/em&gt;&lt;/strong&gt;
+dat je regelmatig oefent.&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="02-koppen.html" class="prev">&larr; Koppen</a>
+      <a href="04-lijsten.html" class="next">Lijsten &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

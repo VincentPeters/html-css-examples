@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset &amp; Box-sizing - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../html/01-basis-template.html">Basis Template</a></li>
+            <li><a href="../html/02-koppen.html">Koppen</a></li>
+            <li><a href="../html/03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="../html/04-lijsten.html">Lijsten</a></li>
+            <li><a href="../html/05-links.html">Links</a></li>
+            <li><a href="../html/06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="../html/07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="../html/08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="../html/09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="02-selectors.html">Selectors</a></li>
+            <li><a href="03-box-model.html">Box Model</a></li>
+            <li><a href="04-typografie.html">Typografie</a></li>
+            <li><a href="05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="06-grootte.html">Grootte</a></li>
+            <li><a href="07-ruimte.html">Ruimte</a></li>
+            <li><a href="08-randen.html">Randen</a></li>
+            <li><a href="09-kleuren.html">Kleuren</a></li>
+            <li><a href="10-eenheden.html">Eenheden</a></li>
+            <li><a href="11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>&rsaquo;</span> CSS <span>&rsaquo;</span> Reset &amp; Box-sizing
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Reset &amp; Box-sizing</h1>
+    <p class="page-description">Een CSS reset en box-sizing: border-box maken je leven als webdeveloper veel makkelijker.</p>
+
+    <!-- Voorbeeld 1: Browser defaults problem -->
+    <section class="example-section">
+      <h2>Browser standaardwaarden</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .reset-defaults-wrapper {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 1rem;
+            }
+            .reset-no-reset {
+              border: 2px solid #e85d04;
+              border-radius: 6px;
+              overflow: hidden;
+            }
+            .reset-no-reset-label {
+              background-color: #e85d04;
+              color: #fff;
+              padding: 0.3rem 0.6rem;
+              font-size: 0.75rem;
+              font-weight: 700;
+            }
+            .reset-no-reset-content {
+              padding: 0;
+            }
+            .reset-no-reset-content h3 {
+              /* Simulate browser defaults */
+              margin: 0.67em 0;
+              font-size: 1.17em;
+              color: #1a1a2e;
+            }
+            .reset-no-reset-content p {
+              margin: 1em 0;
+              font-size: 0.9rem;
+              color: #495057;
+            }
+            .reset-no-reset-content ul {
+              margin: 1em 0;
+              padding-left: 40px;
+              font-size: 0.9rem;
+              color: #495057;
+            }
+            .reset-with-reset {
+              border: 2px solid #2d6a4f;
+              border-radius: 6px;
+              overflow: hidden;
+            }
+            .reset-with-reset-label {
+              background-color: #2d6a4f;
+              color: #fff;
+              padding: 0.3rem 0.6rem;
+              font-size: 0.75rem;
+              font-weight: 700;
+            }
+            .reset-with-reset-content h3 {
+              margin: 0;
+              padding: 0;
+              font-size: 1.17em;
+              color: #1a1a2e;
+            }
+            .reset-with-reset-content p {
+              margin: 0;
+              padding: 0;
+              font-size: 0.9rem;
+              color: #495057;
+            }
+            .reset-with-reset-content ul {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+              font-size: 0.9rem;
+              color: #495057;
+            }
+          </style>
+          <div class="reset-defaults-wrapper">
+            <div class="reset-no-reset">
+              <div class="reset-no-reset-label">Zonder reset</div>
+              <div class="reset-no-reset-content">
+                <h3>Heading</h3>
+                <p>Een paragraaf met standaard margin.</p>
+                <ul>
+                  <li>Lijst item 1</li>
+                  <li>Lijst item 2</li>
+                </ul>
+              </div>
+            </div>
+            <div class="reset-with-reset">
+              <div class="reset-with-reset-label">Met reset</div>
+              <div class="reset-with-reset-content">
+                <h3>Heading</h3>
+                <p>Een paragraaf zonder margin.</p>
+                <ul>
+                  <li>Lijst item 1</li>
+                  <li>Lijst item 2</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #6c757d;">Links: browser voegt standaard margin en padding toe. Rechts: alles begint op nul.</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* Browsers voegen standaard stijlen toe:
+   - h1-h6 hebben margin boven en onder
+   - p heeft margin boven en onder
+   - ul/ol hebben margin en padding-left
+   - body heeft 8px margin
+
+   Dit verschilt per browser! */</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 2: CSS Reset -->
+    <section class="example-section">
+      <h2>CSS Reset</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .reset-code-visual {
+              background-color: #1a1a2e;
+              color: #e2e8f0;
+              padding: 1rem;
+              border-radius: 6px;
+              font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+              font-size: 0.85rem;
+              line-height: 1.8;
+            }
+            .reset-code-visual .rv-selector {
+              color: #7ee787;
+            }
+            .reset-code-visual .rv-property {
+              color: #79c0ff;
+            }
+            .reset-code-visual .rv-value {
+              color: #a5d6ff;
+            }
+            .reset-code-visual .rv-punct {
+              color: #8b949e;
+            }
+            .reset-code-visual .rv-comment {
+              color: #8b949e;
+              font-style: italic;
+            }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">De meest gebruikte basis reset:</p>
+          <div class="reset-code-visual">
+            <span class="rv-selector">*</span><span class="rv-punct">,</span><br>
+            <span class="rv-selector">*::before</span><span class="rv-punct">,</span><br>
+            <span class="rv-selector">*::after</span> <span class="rv-punct">{</span><br>
+            &nbsp;&nbsp;<span class="rv-property">margin</span><span class="rv-punct">:</span> <span class="rv-value">0</span><span class="rv-punct">;</span><br>
+            &nbsp;&nbsp;<span class="rv-property">padding</span><span class="rv-punct">:</span> <span class="rv-value">0</span><span class="rv-punct">;</span><br>
+            &nbsp;&nbsp;<span class="rv-property">box-sizing</span><span class="rv-punct">:</span> <span class="rv-value">border-box</span><span class="rv-punct">;</span><br>
+            <span class="rv-punct">}</span>
+          </div>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #6c757d;">Zet dit <strong>altijd bovenaan</strong> je CSS-bestand.</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* Basis CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * selecteert ALLE elementen */
+/* margin: 0 verwijdert standaard marges */
+/* padding: 0 verwijdert standaard padding */
+/* box-sizing: border-box maakt
+   berekeningen makkelijker */</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 3: box-sizing comparison -->
+    <section class="example-section">
+      <h2>box-sizing vergelijking</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .reset-bs-compare {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 1.5rem;
+            }
+            .reset-bs-column {
+              text-align: center;
+            }
+            .reset-bs-column h4 {
+              font-size: 0.85rem;
+              font-weight: 700;
+              margin-bottom: 0.75rem;
+              color: #1a1a2e;
+            }
+            .reset-bs-outer {
+              position: relative;
+              margin-bottom: 0.5rem;
+            }
+            .reset-bs-content {
+              box-sizing: content-box;
+              width: 200px;
+              padding: 20px;
+              border: 5px solid #e85d04;
+              background-color: #fff3cd;
+              text-align: center;
+              font-size: 0.8rem;
+              color: #495057;
+            }
+            .reset-bs-border {
+              box-sizing: border-box;
+              width: 200px;
+              padding: 20px;
+              border: 5px solid #2d6a4f;
+              background-color: #d4edda;
+              text-align: center;
+              font-size: 0.8rem;
+              color: #495057;
+            }
+            .reset-bs-measure {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 0.5rem;
+              gap: 0.25rem;
+            }
+            .reset-bs-line {
+              height: 2px;
+              background-color: #6c757d;
+              flex: 1;
+              max-width: 60px;
+            }
+            .reset-bs-total {
+              font-size: 0.85rem;
+              font-weight: 700;
+              padding: 0.2rem 0.5rem;
+              border-radius: 4px;
+            }
+            .reset-bs-total-bad {
+              background-color: #f8d7da;
+              color: #842029;
+            }
+            .reset-bs-total-good {
+              background-color: #d4edda;
+              color: #0f5132;
+            }
+            .reset-bs-detail {
+              font-size: 0.7rem;
+              color: #6c757d;
+              margin-top: 0.25rem;
+              line-height: 1.5;
+            }
+          </style>
+          <p style="margin-bottom: 0.75rem; font-size: 0.85rem; color: #6c757d;">Beide boxes hebben <code>width: 200px</code>, <code>padding: 20px</code> en <code>border: 5px</code>:</p>
+          <div class="reset-bs-compare">
+            <div class="reset-bs-column">
+              <h4>content-box (standaard)</h4>
+              <div class="reset-bs-outer">
+                <div class="reset-bs-content">
+                  <strong>width: 200px</strong><br>
+                  (alleen inhoud)
+                </div>
+              </div>
+              <div class="reset-bs-measure">
+                <div class="reset-bs-line"></div>
+                <span class="reset-bs-total reset-bs-total-bad">Totaal: 250px</span>
+                <div class="reset-bs-line"></div>
+              </div>
+              <div class="reset-bs-detail">
+                5 + 20 + 200 + 20 + 5 = 250px
+              </div>
+            </div>
+            <div class="reset-bs-column">
+              <h4>border-box</h4>
+              <div class="reset-bs-outer">
+                <div class="reset-bs-border">
+                  <strong>width: 200px</strong><br>
+                  (alles inbegrepen)
+                </div>
+              </div>
+              <div class="reset-bs-measure">
+                <div class="reset-bs-line"></div>
+                <span class="reset-bs-total reset-bs-total-good">Totaal: 200px</span>
+                <div class="reset-bs-line"></div>
+              </div>
+              <div class="reset-bs-detail">
+                Padding en border zitten<br>in de 200px
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* STANDAARD: content-box */
+.box-content {
+  box-sizing: content-box;
+  width: 200px;
+  padding: 20px;
+  border: 5px solid #e85d04;
+  /* Werkelijke breedte:
+     5 + 20 + 200 + 20 + 5 = 250px! */
+}
+
+/* BETER: border-box */
+.box-border {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px;
+  border: 5px solid #2d6a4f;
+  /* Werkelijke breedte:
+     200px (alles inbegrepen) */
+}</code></pre>
+        </div>
+      </div>
+      <div class="note">
+        <strong>Tip:</strong> Voeg altijd <code>box-sizing: border-box</code> toe aan je CSS reset. Dit zorgt ervoor dat padding en border mee worden gerekend in de breedte.
+      </div>
+      <div class="warning">
+        <strong>Let op:</strong> Zonder <code>box-sizing: border-box</code> is de werkelijke breedte groter dan je width property!
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="10-eenheden.html" class="prev">&larr; Eenheden</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

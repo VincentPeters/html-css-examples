@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typografie - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../html/01-basis-template.html">Basis Template</a></li>
+            <li><a href="../html/02-koppen.html">Koppen</a></li>
+            <li><a href="../html/03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="../html/04-lijsten.html">Lijsten</a></li>
+            <li><a href="../html/05-links.html">Links</a></li>
+            <li><a href="../html/06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="../html/07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="../html/08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="../html/09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="02-selectors.html">Selectors</a></li>
+            <li><a href="03-box-model.html">Box Model</a></li>
+            <li><a href="04-typografie.html">Typografie</a></li>
+            <li><a href="05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="06-grootte.html">Grootte</a></li>
+            <li><a href="07-ruimte.html">Ruimte</a></li>
+            <li><a href="08-randen.html">Randen</a></li>
+            <li><a href="09-kleuren.html">Kleuren</a></li>
+            <li><a href="10-eenheden.html">Eenheden</a></li>
+            <li><a href="11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>&rsaquo;</span> CSS <span>&rsaquo;</span> Typografie
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Typografie</h1>
+    <p class="page-description">CSS biedt veel mogelijkheden om tekst op te maken.</p>
+
+    <!-- Voorbeeld 1: color -->
+    <section class="example-section">
+      <h2>color</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <p style="color: red;">Deze tekst is rood (color: red)</p>
+          <p style="color: blue;">Deze tekst is blauw (color: blue)</p>
+          <p style="color: green;">Deze tekst is groen (color: green)</p>
+          <p style="color: #e65100;">Deze tekst gebruikt een hex kleur (color: #e65100)</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">p { color: red; }
+p { color: blue; }
+p { color: green; }
+p { color: #e65100; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 2: font-family -->
+    <section class="example-section">
+      <h2>font-family</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <p style="font-family: serif; font-size: 1.1rem;">Serif lettertype (font-family: serif)</p>
+          <p style="font-family: sans-serif; font-size: 1.1rem;">Sans-serif lettertype (font-family: sans-serif)</p>
+          <p style="font-family: monospace; font-size: 1.1rem;">Monospace lettertype (font-family: monospace)</p>
+          <p style="font-family: cursive; font-size: 1.1rem;">Cursive lettertype (font-family: cursive)</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">p { font-family: serif; }
+p { font-family: sans-serif; }
+p { font-family: monospace; }
+p { font-family: cursive; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 3: font-size -->
+    <section class="example-section">
+      <h2>font-size</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <p style="font-size: 12px;">Tekst op 12px</p>
+          <p style="font-size: 16px;">Tekst op 16px (standaard)</p>
+          <p style="font-size: 20px;">Tekst op 20px</p>
+          <p style="font-size: 24px;">Tekst op 24px</p>
+          <p style="font-size: 32px;">Tekst op 32px</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">p { font-size: 12px; }
+p { font-size: 16px; } /* standaard */
+p { font-size: 20px; }
+p { font-size: 24px; }
+p { font-size: 32px; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 4: font-weight -->
+    <section class="example-section">
+      <h2>font-weight</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <p style="font-weight: normal;">font-weight: normal</p>
+          <p style="font-weight: bold;">font-weight: bold</p>
+          <p style="font-weight: lighter;">font-weight: lighter</p>
+          <p style="font-weight: 100;">font-weight: 100</p>
+          <p style="font-weight: 400;">font-weight: 400 (= normal)</p>
+          <p style="font-weight: 700;">font-weight: 700 (= bold)</p>
+          <p style="font-weight: 900;">font-weight: 900</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">p { font-weight: normal; }
+p { font-weight: bold; }
+p { font-weight: lighter; }
+p { font-weight: 100; }
+p { font-weight: 400; }  /* = normal */
+p { font-weight: 700; }  /* = bold */
+p { font-weight: 900; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 5: text-align -->
+    <section class="example-section">
+      <h2>text-align</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .typo-align-demo div {
+              border: 1px solid #ccc;
+              padding: 0.5rem;
+              margin-bottom: 0.5rem;
+              background: #fafafa;
+            }
+          </style>
+          <div class="typo-align-demo">
+            <div style="text-align: left;">text-align: left (standaard)</div>
+            <div style="text-align: center;">text-align: center</div>
+            <div style="text-align: right;">text-align: right</div>
+            <div style="text-align: justify;">text-align: justify - Deze tekst is wat langer zodat je het effect van justify kunt zien. De tekst wordt verdeeld over de volledige breedte van het element.</div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">div { text-align: left; }    /* standaard */
+div { text-align: center; }
+div { text-align: right; }
+div { text-align: justify; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 6: line-height -->
+    <section class="example-section">
+      <h2>line-height</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .typo-lh-demo div {
+              border: 1px solid #ccc;
+              padding: 0.75rem;
+              margin-bottom: 1rem;
+              background: #fafafa;
+              font-size: 0.95rem;
+            }
+          </style>
+          <div class="typo-lh-demo">
+            <div style="line-height: 1.0;">
+              <strong>line-height: 1.0 (krap)</strong><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </div>
+            <div style="line-height: 1.6;">
+              <strong>line-height: 1.6 (comfortabel)</strong><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </div>
+            <div style="line-height: 2.5;">
+              <strong>line-height: 2.5 (ruim)</strong><br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* Krap - regels zitten dicht op elkaar */
+p { line-height: 1.0; }
+
+/* Comfortabel - goed leesbaar */
+p { line-height: 1.6; }
+
+/* Ruim - veel ruimte tussen regels */
+p { line-height: 2.5; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="03-box-model.html" class="prev">&larr; Box Model</a>
+      <a href="05-achtergrond.html" class="next">Achtergrond &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

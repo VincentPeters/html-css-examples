@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randen - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../html/01-basis-template.html">Basis Template</a></li>
+            <li><a href="../html/02-koppen.html">Koppen</a></li>
+            <li><a href="../html/03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="../html/04-lijsten.html">Lijsten</a></li>
+            <li><a href="../html/05-links.html">Links</a></li>
+            <li><a href="../html/06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="../html/07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="../html/08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="../html/09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="02-selectors.html">Selectors</a></li>
+            <li><a href="03-box-model.html">Box Model</a></li>
+            <li><a href="04-typografie.html">Typografie</a></li>
+            <li><a href="05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="06-grootte.html">Grootte</a></li>
+            <li><a href="07-ruimte.html">Ruimte</a></li>
+            <li><a href="08-randen.html">Randen</a></li>
+            <li><a href="09-kleuren.html">Kleuren</a></li>
+            <li><a href="10-eenheden.html">Eenheden</a></li>
+            <li><a href="11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>&rsaquo;</span> CSS <span>&rsaquo;</span> Randen
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Randen</h1>
+    <p class="page-description">Met CSS borders kun je randen toevoegen aan elementen.</p>
+
+    <!-- Voorbeeld 1: Border styles -->
+    <section class="example-section">
+      <h2>Border styles</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .rand-style-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+              gap: 1rem;
+            }
+            .rand-style-box {
+              background: #fff;
+              padding: 1rem;
+              text-align: center;
+              font-size: 0.8rem;
+              font-weight: 600;
+              color: #495057;
+              border-width: 3px;
+              border-color: #0077b6;
+            }
+            .rand-s-solid { border-style: solid; }
+            .rand-s-dashed { border-style: dashed; }
+            .rand-s-dotted { border-style: dotted; }
+            .rand-s-double { border-style: double; border-width: 4px; }
+            .rand-s-none { border-style: none; background-color: #e9ecef; }
+          </style>
+          <div class="rand-style-grid">
+            <div class="rand-style-box rand-s-solid">solid</div>
+            <div class="rand-style-box rand-s-dashed">dashed</div>
+            <div class="rand-style-box rand-s-dotted">dotted</div>
+            <div class="rand-style-box rand-s-double">double</div>
+            <div class="rand-style-box rand-s-none">none</div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">.solid  { border-style: solid; }
+.dashed { border-style: dashed; }
+.dotted { border-style: dotted; }
+.double { border-style: double; }
+.none   { border-style: none; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 2: Border properties -->
+    <section class="example-section">
+      <h2>Border properties</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .rand-prop-grid {
+              display: flex;
+              flex-direction: column;
+              gap: 0.75rem;
+            }
+            .rand-prop-box {
+              padding: 0.75rem 1rem;
+              font-size: 0.85rem;
+              background: #fff;
+            }
+            .rand-prop-width {
+              border-style: solid;
+              border-color: #333;
+              border-width: 5px;
+            }
+            .rand-prop-color {
+              border-style: solid;
+              border-width: 3px;
+              border-color: #e85d04;
+            }
+            .rand-prop-shorthand {
+              border: 2px solid #333;
+            }
+          </style>
+          <div class="rand-prop-grid">
+            <div class="rand-prop-box rand-prop-width">
+              <strong>border-width: 5px</strong>
+            </div>
+            <div class="rand-prop-box rand-prop-color">
+              <strong>border-color: #e85d04</strong>
+            </div>
+            <div class="rand-prop-box rand-prop-shorthand">
+              <strong>border: 2px solid #333</strong> (shorthand)
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* Afzonderlijke properties */
+.box-1 {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #333;
+}
+
+.box-2 {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #e85d04;
+}
+
+/* Shorthand: width style color */
+.box-3 {
+  border: 2px solid #333;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 3: Individual sides -->
+    <section class="example-section">
+      <h2>Individuele zijden</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .rand-side-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+              gap: 1rem;
+            }
+            .rand-side-box {
+              background: #fff;
+              padding: 1rem;
+              text-align: center;
+              font-size: 0.8rem;
+              font-weight: 600;
+              color: #495057;
+            }
+            .rand-side-top { border-top: 3px solid #0077b6; }
+            .rand-side-right { border-right: 3px solid #e85d04; }
+            .rand-side-bottom { border-bottom: 3px solid #2d6a4f; }
+            .rand-side-left { border-left: 3px solid #d63384; }
+          </style>
+          <div class="rand-side-grid">
+            <div class="rand-side-box rand-side-top">border-top</div>
+            <div class="rand-side-box rand-side-right">border-right</div>
+            <div class="rand-side-box rand-side-bottom">border-bottom</div>
+            <div class="rand-side-box rand-side-left">border-left</div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">.top {
+  border-top: 3px solid #0077b6;
+}
+
+.right {
+  border-right: 3px solid #e85d04;
+}
+
+.bottom {
+  border-bottom: 3px solid #2d6a4f;
+}
+
+.left {
+  border-left: 3px solid #d63384;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 4: Border radius -->
+    <section class="example-section">
+      <h2>Border-radius</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .rand-radius-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+              gap: 1rem;
+              text-align: center;
+            }
+            .rand-radius-item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.5rem;
+            }
+            .rand-radius-box {
+              width: 80px;
+              height: 80px;
+              background-color: #0077b6;
+              border: 2px solid #023e8a;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              font-size: 0.7rem;
+              font-weight: 600;
+            }
+            .rand-r-0 { border-radius: 0; }
+            .rand-r-5 { border-radius: 5px; }
+            .rand-r-15 { border-radius: 15px; }
+            .rand-r-50 { border-radius: 50%; }
+            .rand-radius-pill {
+              width: 140px;
+              height: 45px;
+              background-color: #0077b6;
+              border: 2px solid #023e8a;
+              border-radius: 9999px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #fff;
+              font-size: 0.7rem;
+              font-weight: 600;
+            }
+            .rand-radius-label {
+              font-size: 0.75rem;
+              color: #6c757d;
+              font-weight: 600;
+            }
+          </style>
+          <div class="rand-radius-grid">
+            <div class="rand-radius-item">
+              <div class="rand-radius-box rand-r-0">0</div>
+              <span class="rand-radius-label">0</span>
+            </div>
+            <div class="rand-radius-item">
+              <div class="rand-radius-box rand-r-5">5px</div>
+              <span class="rand-radius-label">5px</span>
+            </div>
+            <div class="rand-radius-item">
+              <div class="rand-radius-box rand-r-15">15px</div>
+              <span class="rand-radius-label">15px</span>
+            </div>
+            <div class="rand-radius-item">
+              <div class="rand-radius-box rand-r-50">50%</div>
+              <span class="rand-radius-label">50%</span>
+            </div>
+            <div class="rand-radius-item">
+              <div class="rand-radius-pill">9999px</div>
+              <span class="rand-radius-label">9999px (pill)</span>
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">.geen    { border-radius: 0; }
+.klein   { border-radius: 5px; }
+.medium  { border-radius: 15px; }
+.cirkel  { border-radius: 50%; }
+.pill    { border-radius: 9999px; }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="07-ruimte.html" class="prev">&larr; Ruimte</a>
+      <a href="09-kleuren.html" class="next">Kleuren &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

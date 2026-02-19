@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basis Template - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-basis-template.html">Basis Template</a></li>
+            <li><a href="02-koppen.html">Koppen</a></li>
+            <li><a href="03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="04-lijsten.html">Lijsten</a></li>
+            <li><a href="05-links.html">Links</a></li>
+            <li><a href="06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="../css-voorbeelden/02-selectors.html">Selectors</a></li>
+            <li><a href="../css-voorbeelden/03-box-model.html">Box Model</a></li>
+            <li><a href="../css-voorbeelden/04-typografie.html">Typografie</a></li>
+            <li><a href="../css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="../css-voorbeelden/06-grootte.html">Grootte</a></li>
+            <li><a href="../css-voorbeelden/07-ruimte.html">Ruimte</a></li>
+            <li><a href="../css-voorbeelden/08-randen.html">Randen</a></li>
+            <li><a href="../css-voorbeelden/09-kleuren.html">Kleuren</a></li>
+            <li><a href="../css-voorbeelden/10-eenheden.html">Eenheden</a></li>
+            <li><a href="../css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>›</span> HTML <span>›</span> Basis Template
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Basis Template</h1>
+    <p class="page-description">De standaard HTML5 structuur die elke webpagina nodig heeft.</p>
+
+    <section class="example-section">
+      <h2>HTML5 Basis Structuur</h2>
+      <p>Elke HTML-pagina begint met dezelfde basisstructuur. Dit is het minimale sjabloon dat je nodig hebt om een geldige HTML5-pagina te maken.</p>
+      <div class="example-split">
+        <div class="example-code example-code-only">
+          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="nl"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Mijn Eerste Webpagina&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hallo Wereld!&lt;/h1&gt;
+  &lt;p&gt;Dit is mijn eerste webpagina.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Wat doet elk onderdeel?</h2>
+      <div class="note">
+        <p><strong>&lt;!DOCTYPE html&gt;</strong> - Vertelt de browser dat dit een HTML5-document is. Dit moet altijd de eerste regel zijn.</p>
+        <p><strong>&lt;html lang="nl"&gt;</strong> - Het root-element van de pagina. Het <code>lang</code>-attribuut geeft de taal aan (nl = Nederlands).</p>
+        <p><strong>&lt;head&gt;</strong> - Bevat meta-informatie over de pagina die niet zichtbaar is op het scherm.</p>
+        <p><strong>&lt;meta charset="UTF-8"&gt;</strong> - Zorgt ervoor dat speciale tekens zoals &eacute;, &euml;, &uuml; correct worden weergegeven.</p>
+        <p><strong>&lt;meta name="viewport" ...&gt;</strong> - Zorgt ervoor dat de pagina er goed uitziet op mobiele apparaten.</p>
+        <p><strong>&lt;title&gt;</strong> - De titel die in het browsertabblad verschijnt.</p>
+        <p><strong>&lt;body&gt;</strong> - Bevat alle zichtbare inhoud van de webpagina.</p>
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="02-koppen.html" class="next">Koppen &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

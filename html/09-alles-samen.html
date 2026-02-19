@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alles Samen - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-basis-template.html">Basis Template</a></li>
+            <li><a href="02-koppen.html">Koppen</a></li>
+            <li><a href="03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="04-lijsten.html">Lijsten</a></li>
+            <li><a href="05-links.html">Links</a></li>
+            <li><a href="06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="../css-voorbeelden/02-selectors.html">Selectors</a></li>
+            <li><a href="../css-voorbeelden/03-box-model.html">Box Model</a></li>
+            <li><a href="../css-voorbeelden/04-typografie.html">Typografie</a></li>
+            <li><a href="../css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="../css-voorbeelden/06-grootte.html">Grootte</a></li>
+            <li><a href="../css-voorbeelden/07-ruimte.html">Ruimte</a></li>
+            <li><a href="../css-voorbeelden/08-randen.html">Randen</a></li>
+            <li><a href="../css-voorbeelden/09-kleuren.html">Kleuren</a></li>
+            <li><a href="../css-voorbeelden/10-eenheden.html">Eenheden</a></li>
+            <li><a href="../css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>›</span> HTML <span>›</span> Alles Samen
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Alles Samen</h1>
+    <p class="page-description">Een volledig voorbeeld dat alle HTML-elementen combineert die we hebben geleerd.</p>
+
+    <section class="example-section">
+      <h2>Mini "Over Mij" Pagina</h2>
+      <p>Dit voorbeeld combineert semantische structuur, koppen, paragrafen, tekst-opmaak, lijsten, links, een afbeelding, en div/span-elementen tot een complete mini-pagina.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <header style="background-color: #1565c0; color: white; padding: 1rem;">
+            <h1 style="margin: 0; font-size: 1.5rem;">Jan Janssen</h1>
+            <nav>
+              <a href="#over" style="color: #bbdefb; margin-right: 1rem;">Over Mij</a>
+              <a href="#hobbys" style="color: #bbdefb; margin-right: 1rem;">Hobby's</a>
+              <a href="#vaardigheden" style="color: #bbdefb; margin-right: 1rem;">Vaardigheden</a>
+              <a href="#foto" style="color: #bbdefb;">Foto</a>
+            </nav>
+          </header>
+
+          <main style="padding: 1rem; background-color: #fafafa;">
+            <section id="over" style="margin-bottom: 1rem;">
+              <h2 style="color: #1565c0;">Over Mij</h2>
+              <p>Hallo! Ik ben <strong>Jan Janssen</strong>, een <em>student IoT</em> aan de <span style="color: #d32f2f; font-weight: bold;">KdG Hogeschool</span> in Antwerpen.</p>
+              <p>Ik ben gepassioneerd door <strong>webontwikkeling</strong> en <em>het Internet of Things</em>. In mijn vrije tijd leer ik graag nieuwe programmeertalen.</p>
+            </section>
+
+            <section id="hobbys" style="margin-bottom: 1rem;">
+              <h2 style="color: #1565c0;">Mijn Hobby's</h2>
+              <ul>
+                <li>Programmeren</li>
+                <li>Fietsen door Antwerpen</li>
+                <li>Fotografie</li>
+                <li>Koken</li>
+              </ul>
+            </section>
+
+            <section id="vaardigheden" style="margin-bottom: 1rem;">
+              <h2 style="color: #1565c0;">Mijn Vaardigheden</h2>
+              <h3>Top 5 (op volgorde):</h3>
+              <ol>
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Arduino</li>
+                <li>Linux</li>
+              </ol>
+            </section>
+
+            <section id="foto" style="margin-bottom: 1rem;">
+              <h2 style="color: #1565c0;">Mijn Favoriete Landschap</h2>
+              <div style="text-align: center;">
+                <img src="../images/voorbeeld-landschap.jpg" alt="Een mooi landschap" style="max-width: 100%; height: auto;">
+                <p><em>Een prachtig uitzicht dat ik tijdens een wandeling heb gefotografeerd.</em></p>
+              </div>
+            </section>
+          </main>
+
+          <footer style="background-color: #333; color: white; padding: 1rem; text-align: center;">
+            <p>Contact: <a href="mailto:jan@voorbeeld.be" style="color: #bbdefb;">jan@voorbeeld.be</a></p>
+            <p><span style="color: #999;">Gemaakt met HTML</span></p>
+          </footer>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;header style="background-color: #1565c0; color: white; padding: 1rem;"&gt;
+  &lt;h1&gt;Jan Janssen&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#over"&gt;Over Mij&lt;/a&gt;
+    &lt;a href="#hobbys"&gt;Hobby's&lt;/a&gt;
+    &lt;a href="#vaardigheden"&gt;Vaardigheden&lt;/a&gt;
+    &lt;a href="#foto"&gt;Foto&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main style="padding: 1rem; background-color: #fafafa;"&gt;
+
+  &lt;section id="over"&gt;
+    &lt;h2&gt;Over Mij&lt;/h2&gt;
+    &lt;p&gt;Hallo! Ik ben &lt;strong&gt;Jan Janssen&lt;/strong&gt;,
+    een &lt;em&gt;student IoT&lt;/em&gt; aan de
+    &lt;span style="color: #d32f2f; font-weight: bold;"&gt;
+      KdG Hogeschool
+    &lt;/span&gt; in Antwerpen.&lt;/p&gt;
+    &lt;p&gt;Ik ben gepassioneerd door
+    &lt;strong&gt;webontwikkeling&lt;/strong&gt; en
+    &lt;em&gt;het Internet of Things&lt;/em&gt;. In mijn
+    vrije tijd leer ik graag nieuwe
+    programmeertalen.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section id="hobbys"&gt;
+    &lt;h2&gt;Mijn Hobby's&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Programmeren&lt;/li&gt;
+      &lt;li&gt;Fietsen door Antwerpen&lt;/li&gt;
+      &lt;li&gt;Fotografie&lt;/li&gt;
+      &lt;li&gt;Koken&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+
+  &lt;section id="vaardigheden"&gt;
+    &lt;h2&gt;Mijn Vaardigheden&lt;/h2&gt;
+    &lt;h3&gt;Top 5 (op volgorde):&lt;/h3&gt;
+    &lt;ol&gt;
+      &lt;li&gt;HTML &amp;amp; CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+      &lt;li&gt;Python&lt;/li&gt;
+      &lt;li&gt;Arduino&lt;/li&gt;
+      &lt;li&gt;Linux&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/section&gt;
+
+  &lt;section id="foto"&gt;
+    &lt;h2&gt;Mijn Favoriete Landschap&lt;/h2&gt;
+    &lt;div style="text-align: center;"&gt;
+      &lt;img src="../images/voorbeeld-landschap.jpg"
+           alt="Een mooi landschap"
+           style="max-width: 100%; height: auto;"&gt;
+      &lt;p&gt;&lt;em&gt;Een prachtig uitzicht dat ik
+      tijdens een wandeling heb
+      gefotografeerd.&lt;/em&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+&lt;/main&gt;
+
+&lt;footer style="background-color: #333; color: white; padding: 1rem; text-align: center;"&gt;
+  &lt;p&gt;Contact: &lt;a href="mailto:jan@voorbeeld.be"&gt;
+    jan@voorbeeld.be
+  &lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;span style="color: #999;"&gt;Gemaakt met
+  HTML&lt;/span&gt;&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="08-div-en-span.html" class="prev">&larr; Div &amp; Span</a>
+      <a href="../css-voorbeelden/01-css-toepassen.html" class="next">CSS Toepassen &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantische Elementen - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-basis-template.html">Basis Template</a></li>
+            <li><a href="02-koppen.html">Koppen</a></li>
+            <li><a href="03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="04-lijsten.html">Lijsten</a></li>
+            <li><a href="05-links.html">Links</a></li>
+            <li><a href="06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="../css-voorbeelden/02-selectors.html">Selectors</a></li>
+            <li><a href="../css-voorbeelden/03-box-model.html">Box Model</a></li>
+            <li><a href="../css-voorbeelden/04-typografie.html">Typografie</a></li>
+            <li><a href="../css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="../css-voorbeelden/06-grootte.html">Grootte</a></li>
+            <li><a href="../css-voorbeelden/07-ruimte.html">Ruimte</a></li>
+            <li><a href="../css-voorbeelden/08-randen.html">Randen</a></li>
+            <li><a href="../css-voorbeelden/09-kleuren.html">Kleuren</a></li>
+            <li><a href="../css-voorbeelden/10-eenheden.html">Eenheden</a></li>
+            <li><a href="../css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>›</span> HTML <span>›</span> Semantische Elementen
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Semantische Elementen</h1>
+    <p class="page-description">Semantische elementen geven betekenis aan de structuur van je pagina.</p>
+
+    <section class="example-section">
+      <h2>Volledige Paginastructuur</h2>
+      <p>Semantische elementen beschrijven de rol van elk deel van je pagina. Hier zie je de belangrijkste elementen met kleuren om de structuur zichtbaar te maken.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <header style="background: #e3f2fd; padding: 0.5rem; margin: 0.25rem; border: 1px dashed #1565c0;">
+            <strong>&lt;header&gt;</strong> - Koptekst van de pagina
+          </header>
+          <nav style="background: #f3e5f5; padding: 0.5rem; margin: 0.25rem; border: 1px dashed #7b1fa2;">
+            <strong>&lt;nav&gt;</strong> - Navigatie: <a href="#">Home</a> | <a href="#">Over</a> | <a href="#">Contact</a>
+          </nav>
+          <main style="background: #e8f5e9; padding: 0.5rem; margin: 0.25rem; border: 1px dashed #2e7d32;">
+            <strong>&lt;main&gt;</strong> - Hoofdinhoud
+            <section style="background: #fff3e0; padding: 0.5rem; margin: 0.25rem; border: 1px dashed #e65100;">
+              <strong>&lt;section&gt;</strong> - Een thematische groep
+            </section>
+            <article style="background: #fce4ec; padding: 0.5rem; margin: 0.25rem; border: 1px dashed #c62828;">
+              <strong>&lt;article&gt;</strong> - Een zelfstandig artikel
+            </article>
+          </main>
+          <footer style="background: #f5f5f5; padding: 0.5rem; margin: 0.25rem; border: 1px dashed #616161;">
+            <strong>&lt;footer&gt;</strong> - Voettekst van de pagina
+          </footer>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;header&gt;
+  Koptekst van de pagina
+&lt;/header&gt;
+
+&lt;nav&gt;
+  Navigatie: Home | Over | Contact
+&lt;/nav&gt;
+
+&lt;main&gt;
+  Hoofdinhoud
+
+  &lt;section&gt;
+    Een thematische groep
+  &lt;/section&gt;
+
+  &lt;article&gt;
+    Een zelfstandig artikel
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  Voettekst van de pagina
+&lt;/footer&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Het &lt;article&gt; Element</h2>
+      <p>Een <code>&lt;article&gt;</code> bevat content die op zichzelf kan staan, zoals een blogpost, nieuwsbericht of forumpost.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <article style="background: #fce4ec; padding: 1rem; border: 1px dashed #c62828;">
+            <h3>Mijn Eerste Blogpost</h3>
+            <p><small>Gepubliceerd op 15 januari 2025</small></p>
+            <p>Dit is de inhoud van mijn eerste blogpost. Een <code>&lt;article&gt;</code> is perfect voor content die op zichzelf betekenis heeft.</p>
+            <p>Je zou dit artikel kunnen kopiëren naar een andere website en het zou nog steeds logisch zijn.</p>
+          </article>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;article&gt;
+  &lt;h3&gt;Mijn Eerste Blogpost&lt;/h3&gt;
+  &lt;p&gt;&lt;small&gt;Gepubliceerd op 15 januari 2025&lt;/small&gt;&lt;/p&gt;
+  &lt;p&gt;Dit is de inhoud van mijn eerste blogpost.
+  Een &amp;lt;article&amp;gt; is perfect voor content
+  die op zichzelf betekenis heeft.&lt;/p&gt;
+  &lt;p&gt;Je zou dit artikel kunnen kopiëren naar
+  een andere website en het zou nog steeds
+  logisch zijn.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Het &lt;section&gt; Element</h2>
+      <p>Een <code>&lt;section&gt;</code> groepeert gerelateerde content rond een thema. Elke sectie heeft meestal een eigen koptekst.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <section style="background: #fff3e0; padding: 1rem; margin-bottom: 0.5rem; border: 1px dashed #e65100;">
+            <h3>Introductie</h3>
+            <p>Welkom op onze website. Hier vind je informatie over onze diensten.</p>
+          </section>
+          <section style="background: #fff3e0; padding: 1rem; margin-bottom: 0.5rem; border: 1px dashed #e65100;">
+            <h3>Onze Diensten</h3>
+            <p>Wij bieden webdesign, hosting en onderhoud aan.</p>
+          </section>
+          <section style="background: #fff3e0; padding: 1rem; border: 1px dashed #e65100;">
+            <h3>Contact</h3>
+            <p>Neem contact met ons op via het formulier.</p>
+          </section>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;section&gt;
+  &lt;h3&gt;Introductie&lt;/h3&gt;
+  &lt;p&gt;Welkom op onze website. Hier vind je
+  informatie over onze diensten.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h3&gt;Onze Diensten&lt;/h3&gt;
+  &lt;p&gt;Wij bieden webdesign, hosting en
+  onderhoud aan.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h3&gt;Contact&lt;/h3&gt;
+  &lt;p&gt;Neem contact met ons op via het
+  formulier.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">
+      <p><strong>Gebruik semantische elementen in plaats van &lt;div&gt; waar mogelijk.</strong> Dit helpt zoekmachines en screenreaders om de structuur van je pagina te begrijpen.</p>
+    </div>
+
+    <nav class="page-nav">
+      <a href="06-afbeeldingen.html" class="prev">&larr; Afbeeldingen</a>
+      <a href="08-div-en-span.html" class="next">Div &amp; Span &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div &amp; Span - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-basis-template.html">Basis Template</a></li>
+            <li><a href="02-koppen.html">Koppen</a></li>
+            <li><a href="03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="04-lijsten.html">Lijsten</a></li>
+            <li><a href="05-links.html">Links</a></li>
+            <li><a href="06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="../css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="../css-voorbeelden/02-selectors.html">Selectors</a></li>
+            <li><a href="../css-voorbeelden/03-box-model.html">Box Model</a></li>
+            <li><a href="../css-voorbeelden/04-typografie.html">Typografie</a></li>
+            <li><a href="../css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="../css-voorbeelden/06-grootte.html">Grootte</a></li>
+            <li><a href="../css-voorbeelden/07-ruimte.html">Ruimte</a></li>
+            <li><a href="../css-voorbeelden/08-randen.html">Randen</a></li>
+            <li><a href="../css-voorbeelden/09-kleuren.html">Kleuren</a></li>
+            <li><a href="../css-voorbeelden/10-eenheden.html">Eenheden</a></li>
+            <li><a href="../css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>›</span> HTML <span>›</span> Div &amp; Span
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Div &amp; Span</h1>
+    <p class="page-description">Div en span zijn niet-semantische elementen voor het groeperen van content.</p>
+
+    <section class="example-section">
+      <h2>&lt;div&gt; als Blok-element</h2>
+      <p>Een <code>&lt;div&gt;</code> is een blok-element: het neemt de volledige breedte in en begint op een nieuwe regel. Hier zie je drie divs die op elkaar gestapeld worden.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <div style="background-color: #e3f2fd; padding: 1rem; margin-bottom: 0.5rem;">
+            Eerste div - blauw
+          </div>
+          <div style="background-color: #e8f5e9; padding: 1rem; margin-bottom: 0.5rem;">
+            Tweede div - groen
+          </div>
+          <div style="background-color: #fff3e0; padding: 1rem;">
+            Derde div - oranje
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;div style="background-color: #e3f2fd; padding: 1rem; margin-bottom: 0.5rem;"&gt;
+  Eerste div - blauw
+&lt;/div&gt;
+
+&lt;div style="background-color: #e8f5e9; padding: 1rem; margin-bottom: 0.5rem;"&gt;
+  Tweede div - groen
+&lt;/div&gt;
+
+&lt;div style="background-color: #fff3e0; padding: 1rem;"&gt;
+  Derde div - oranje
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>&lt;span&gt; als Inline-element</h2>
+      <p>Een <code>&lt;span&gt;</code> is een inline-element: het blijft binnen de tekst en neemt alleen de ruimte in die het nodig heeft.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <p>Dit is een zin met <span style="color: #d32f2f; font-weight: bold;">rood</span> en <span style="color: #1565c0; font-weight: bold;">blauw</span> en <span style="background-color: #fff176; padding: 0.1rem 0.3rem;">gemarkeerde</span> woorden dankzij het span-element.</p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;p&gt;Dit is een zin met
+  &lt;span style="color: #d32f2f; font-weight: bold;"&gt;rood&lt;/span&gt; en
+  &lt;span style="color: #1565c0; font-weight: bold;"&gt;blauw&lt;/span&gt; en
+  &lt;span style="background-color: #fff176; padding: 0.1rem 0.3rem;"&gt;gemarkeerde&lt;/span&gt;
+  woorden dankzij het span-element.
+&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Vergelijking: Blok vs Inline</h2>
+      <p>Het verschil wordt duidelijk als je beide naast elkaar ziet. Blok-elementen stapelen verticaal, inline-elementen blijven naast elkaar.</p>
+      <div class="example-split">
+        <div class="example-result">
+          <p><strong>Blok-elementen (div):</strong></p>
+          <div style="background-color: #e3f2fd; padding: 0.5rem; margin-bottom: 0.25rem; border: 1px solid #1565c0;">Div A</div>
+          <div style="background-color: #e3f2fd; padding: 0.5rem; margin-bottom: 0.25rem; border: 1px solid #1565c0;">Div B</div>
+          <div style="background-color: #e3f2fd; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #1565c0;">Div C</div>
+
+          <p><strong>Inline-elementen (span):</strong></p>
+          <p>
+            <span style="background-color: #fce4ec; padding: 0.25rem; border: 1px solid #c62828;">Span A</span>
+            <span style="background-color: #fce4ec; padding: 0.25rem; border: 1px solid #c62828;">Span B</span>
+            <span style="background-color: #fce4ec; padding: 0.25rem; border: 1px solid #c62828;">Span C</span>
+          </p>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-html">&lt;!-- Blok-elementen (div) --&gt;
+&lt;div style="background-color: #e3f2fd;"&gt;Div A&lt;/div&gt;
+&lt;div style="background-color: #e3f2fd;"&gt;Div B&lt;/div&gt;
+&lt;div style="background-color: #e3f2fd;"&gt;Div C&lt;/div&gt;
+
+&lt;!-- Inline-elementen (span) --&gt;
+&lt;p&gt;
+  &lt;span style="background-color: #fce4ec;"&gt;Span A&lt;/span&gt;
+  &lt;span style="background-color: #fce4ec;"&gt;Span B&lt;/span&gt;
+  &lt;span style="background-color: #fce4ec;"&gt;Span C&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">
+      <p><strong>Gebruik &lt;div&gt; voor blok-groepering en &lt;span&gt; voor inline-opmaak.</strong> Kies semantische elementen als die beschikbaar zijn.</p>
+    </div>
+
+    <nav class="page-nav">
+      <a href="07-semantische-elementen.html" class="prev">&larr; Semantische Elementen</a>
+      <a href="09-alles-samen.html" class="next">Alles Samen &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

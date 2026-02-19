@@ -1,0 +1,391 @@
+/* ============================================
+   Portfolio Stylesheet
+   Stijlen voor het portfolio-project.
+   Alle regels zijn scoped onder .portfolio
+   om conflicten met main.css te vermijden.
+   ============================================ */
+
+/* --- CSS Reset (aanvullend op main.css) --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* --- Smooth scrolling --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Custom Properties (CSS variabelen) --- */
+.portfolio {
+  --primary: #0077b6;
+  --secondary: #1a1a2e;
+  --accent: #e85d04;
+  --light: #f8f9fa;
+  --dark: #1a1a2e;
+}
+
+/* ============================================
+   PORTFOLIO HEADER
+   Volledige breedte, donkere achtergrond
+   ============================================ */
+.portfolio .portfolio-header {
+  background-color: var(--secondary);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.portfolio .portfolio-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.portfolio .portfolio-header p {
+  font-size: 1.15rem;
+  color: #adb5bd;
+  font-style: italic;
+}
+
+/* ============================================
+   PORTFOLIO NAVIGATIE
+   Sticky bar net onder de site-navigatie
+   ============================================ */
+.portfolio .portfolio-nav {
+  background-color: #16213e;
+  position: sticky;
+  top: 48px; /* Hoogte van de site-header */
+  z-index: 50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .portfolio-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.portfolio .portfolio-nav a {
+  display: block;
+  color: #e2e8f0;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.portfolio .portfolio-nav a:hover {
+  background-color: var(--primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ============================================
+   PORTFOLIO MAIN CONTENT
+   Gecentreerde container met max-width
+   ============================================ */
+.portfolio .portfolio-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Sectie styling */
+.portfolio .portfolio-section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.portfolio .portfolio-section:last-child {
+  border-bottom: none;
+}
+
+.portfolio .portfolio-section h2 {
+  font-size: 1.75rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+}
+
+/* ============================================
+   PROFIEL SECTIE
+   Afbeelding naast tekst met flexbox
+   ============================================ */
+.portfolio .profiel {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+/* Profielfoto: ronde afbeelding met schaduw */
+.portfolio .profiel-foto {
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio .profiel-tekst p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #495057;
+}
+
+.portfolio .profiel-tekst p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   HOBBY LIJST
+   Ongeordende lijst met aangepaste bullets
+   Gebruik van ::before pseudo-element
+   ============================================ */
+.portfolio .hobby-lijst {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.portfolio .hobby-lijst li {
+  padding: 0.6rem 0 0.6rem 2rem;
+  position: relative;
+  font-size: 1.05rem;
+  color: #495057;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.portfolio .hobby-lijst li:last-child {
+  border-bottom: none;
+}
+
+/* Gekleurde bullet met ::before */
+.portfolio .hobby-lijst li::before {
+  content: "\25B6"; /* Driehoek-symbool */
+  color: var(--accent);
+  font-size: 0.75rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+}
+
+/* ============================================
+   VAARDIGHEDEN LIJST
+   Geordende lijst met aangepaste nummering
+   ============================================ */
+.portfolio .vaardigheden-lijst {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  counter-reset: vaardigheid;
+}
+
+.portfolio .vaardigheden-lijst li {
+  counter-increment: vaardigheid;
+  padding: 0.75rem 1rem 0.75rem 3.5rem;
+  position: relative;
+  font-size: 1.05rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--primary);
+}
+
+/* Aangepast nummer met ::before */
+.portfolio .vaardigheden-lijst li::before {
+  content: counter(vaardigheid);
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  color: #fff;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ============================================
+   PROJECT SHOWCASE
+   Afbeelding met beschrijving
+   ============================================ */
+.portfolio .project-showcase {
+  margin-top: 1rem;
+}
+
+.portfolio .project-afbeelding {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.portfolio .project-beschrijving h3 {
+  font-size: 1.3rem;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.portfolio .project-beschrijving p {
+  line-height: 1.7;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.portfolio .project-beschrijving p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   CONTACT FOOTER
+   Gecentreerde footer met achtergrondkleur
+   ============================================ */
+.portfolio .portfolio-footer {
+  background-color: var(--secondary);
+  color: #e2e8f0;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.portfolio .portfolio-footer h2 {
+  font-size: 1.75rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  border-bottom: none;
+  display: block;
+}
+
+.portfolio .portfolio-footer p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* E-mail link styling */
+.portfolio .portfolio-footer a {
+  color: #74c0fc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.portfolio .portfolio-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Terug naar boven link */
+.portfolio .terug-naar-boven {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--primary);
+  color: #fff !important;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio .terug-naar-boven:hover {
+  background-color: #005f8a;
+  text-decoration: none !important;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   HOVER EFFECTEN OP LINKS
+   Subtiele kleurovergangen
+   ============================================ */
+.portfolio a {
+  transition: color 0.2s ease;
+}
+
+.portfolio .profiel-tekst a,
+.portfolio .project-beschrijving a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.portfolio .profiel-tekst a:hover,
+.portfolio .project-beschrijving a:hover {
+  color: var(--accent);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   Mobiele aanpassingen voor kleinere schermen
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* Portfolio header: kleiner op mobiel */
+  .portfolio .portfolio-header h1 {
+    font-size: 1.75rem;
+  }
+
+  /* Portfolio nav: scrollbaar op mobiel */
+  .portfolio .portfolio-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .portfolio .portfolio-nav a {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Profiel: afbeelding boven tekst stapelen */
+  .portfolio .profiel {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .portfolio .profiel-foto {
+    margin-bottom: 1rem;
+  }
+
+  /* Secties: minder padding */
+  .portfolio .portfolio-section {
+    padding: 1.5rem 0;
+  }
+
+  /* Vaardigheden lijst: smaller */
+  .portfolio .vaardigheden-lijst li {
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .portfolio .portfolio-header {
+    padding: 2rem 1rem;
+  }
+
+  .portfolio .portfolio-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio .portfolio-main {
+    padding: 0 1rem;
+  }
+
+  .portfolio .portfolio-section h2 {
+    font-size: 1.4rem;
+  }
+}

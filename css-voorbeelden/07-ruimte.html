@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruimte - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../html/01-basis-template.html">Basis Template</a></li>
+            <li><a href="../html/02-koppen.html">Koppen</a></li>
+            <li><a href="../html/03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="../html/04-lijsten.html">Lijsten</a></li>
+            <li><a href="../html/05-links.html">Links</a></li>
+            <li><a href="../html/06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="../html/07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="../html/08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="../html/09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="02-selectors.html">Selectors</a></li>
+            <li><a href="03-box-model.html">Box Model</a></li>
+            <li><a href="04-typografie.html">Typografie</a></li>
+            <li><a href="05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="06-grootte.html">Grootte</a></li>
+            <li><a href="07-ruimte.html">Ruimte</a></li>
+            <li><a href="08-randen.html">Randen</a></li>
+            <li><a href="09-kleuren.html">Kleuren</a></li>
+            <li><a href="10-eenheden.html">Eenheden</a></li>
+            <li><a href="11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>&rsaquo;</span> CSS <span>&rsaquo;</span> Ruimte
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Ruimte</h1>
+    <p class="page-description">Margin en padding bepalen de ruimte rond en binnen elementen.</p>
+
+    <!-- Voorbeeld 1: Padding -->
+    <section class="example-section">
+      <h2>Padding</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .ruimte-pad-demo {
+              background-color: #0077b6;
+              color: #fff;
+              padding-top: 10px;
+              padding-right: 30px;
+              padding-bottom: 20px;
+              padding-left: 40px;
+              font-size: 0.9rem;
+              border-radius: 4px;
+            }
+            .ruimte-pad-wrapper {
+              background-color: #caf0f8;
+              display: inline-block;
+              border-radius: 4px;
+            }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">Het lichtblauwe gebied toont de padding rond de tekst:</p>
+          <div class="ruimte-pad-wrapper">
+            <div class="ruimte-pad-demo">
+              Ik heb padding:<br>
+              top: 10px | right: 30px<br>
+              bottom: 20px | left: 40px
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">.box {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  background-color: #0077b6;
+  color: #fff;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 2: Margin -->
+    <section class="example-section">
+      <h2>Margin</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .ruimte-margin-wrapper {
+              background-color: #fff3cd;
+              padding: 4px;
+              border-radius: 4px;
+            }
+            .ruimte-margin-box {
+              background-color: #e85d04;
+              color: #fff;
+              padding: 12px;
+              font-size: 0.85rem;
+              border-radius: 4px;
+            }
+            .ruimte-margin-box-1 {
+              margin-bottom: 20px;
+            }
+            .ruimte-margin-box-2 {
+              margin-left: 40px;
+              margin-bottom: 20px;
+            }
+            .ruimte-margin-box-3 {
+              margin-left: 80px;
+            }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">Het gele gebied is de wrapper; de oranje blokken hebben margin:</p>
+          <div class="ruimte-margin-wrapper">
+            <div class="ruimte-margin-box ruimte-margin-box-1">margin-bottom: 20px</div>
+            <div class="ruimte-margin-box ruimte-margin-box-2">margin-left: 40px</div>
+            <div class="ruimte-margin-box ruimte-margin-box-3">margin-left: 80px</div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">.box-1 {
+  margin-bottom: 20px;
+}
+
+.box-2 {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.box-3 {
+  margin-left: 80px;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 3: Shorthand -->
+    <section class="example-section">
+      <h2>Shorthand notatie</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .ruimte-sh-outer {
+              background-color: #d4edda;
+              display: inline-block;
+              border-radius: 4px;
+              margin-bottom: 0.75rem;
+              vertical-align: top;
+            }
+            .ruimte-sh-box {
+              background-color: #2d6a4f;
+              color: #fff;
+              font-size: 0.8rem;
+              border-radius: 4px;
+              white-space: nowrap;
+            }
+            .ruimte-sh-1 { margin: 10px; }
+            .ruimte-sh-2 { margin: 10px 30px; }
+            .ruimte-sh-3 { margin: 10px 20px 30px 40px; }
+          </style>
+          <p style="margin-bottom: 0.5rem; font-size: 0.85rem; color: #6c757d;">Groene achtergrond toont de margin ruimte:</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div>
+              <p style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.25rem;">1 waarde</p>
+              <div class="ruimte-sh-outer">
+                <div class="ruimte-sh-box ruimte-sh-1">margin: 10px</div>
+              </div>
+            </div>
+            <div>
+              <p style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.25rem;">2 waarden</p>
+              <div class="ruimte-sh-outer">
+                <div class="ruimte-sh-box ruimte-sh-2">margin: 10px 30px</div>
+              </div>
+            </div>
+            <div>
+              <p style="font-size: 0.8rem; font-weight: 600; margin-bottom: 0.25rem;">4 waarden</p>
+              <div class="ruimte-sh-outer">
+                <div class="ruimte-sh-box ruimte-sh-3">margin: 10px 20px 30px 40px</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* 1 waarde: alle zijden gelijk */
+margin: 10px;
+
+/* 2 waarden: top/bottom | left/right */
+margin: 10px 30px;
+
+/* 4 waarden: top | right | bottom | left */
+margin: 10px 20px 30px 40px;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 4: Centering with margin -->
+    <section class="example-section">
+      <h2>Centreren met margin: 0 auto</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .ruimte-center-wrapper {
+              background-color: #e9ecef;
+              padding: 1rem;
+              border-radius: 4px;
+            }
+            .ruimte-center-box {
+              width: 200px;
+              margin: 0 auto;
+              background-color: #0077b6;
+              color: #fff;
+              padding: 1rem;
+              text-align: center;
+              border-radius: 4px;
+              font-size: 0.9rem;
+            }
+            .ruimte-center-left {
+              width: 200px;
+              background-color: #adb5bd;
+              color: #fff;
+              padding: 1rem;
+              text-align: center;
+              border-radius: 4px;
+              font-size: 0.9rem;
+              margin-bottom: 0.75rem;
+            }
+          </style>
+          <div class="ruimte-center-wrapper">
+            <div class="ruimte-center-left">Zonder auto margin</div>
+            <div class="ruimte-center-box">margin: 0 auto</div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* Element staat standaard links */
+.box-links {
+  width: 200px;
+}
+
+/* Gecentreerd met margin auto */
+.box-gecentreerd {
+  width: 200px;
+  margin: 0 auto;
+}</code></pre>
+        </div>
+      </div>
+      <div class="note">
+        <strong>Tip:</strong> <code>margin: 0 auto</code> is de eenvoudigste manier om een blok-element horizontaal te centreren. Het element moet wel een vaste breedte (width) hebben.
+      </div>
+    </section>
+
+    <nav class="page-nav">
+      <a href="06-grootte.html" class="prev">&larr; Grootte</a>
+      <a href="08-randen.html" class="next">Randen &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>

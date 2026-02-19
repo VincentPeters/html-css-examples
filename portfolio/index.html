@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mijn Portfolio - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== SITE NAVIGATIE ===== -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../html/01-basis-template.html">Basis Template</a></li>
+            <li><a href="../html/02-koppen.html">Koppen</a></li>
+            <li><a href="../html/03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="../html/04-lijsten.html">Lijsten</a></li>
+            <li><a href="../html/05-links.html">Links</a></li>
+            <li><a href="../html/06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="../html/07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="../html/08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="../html/09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="../css-voorbeelden/02-selectors.html">Selectors</a></li>
+            <li><a href="../css-voorbeelden/03-box-model.html">Box Model</a></li>
+            <li><a href="../css-voorbeelden/04-typografie.html">Typografie</a></li>
+            <li><a href="../css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="../css-voorbeelden/06-grootte.html">Grootte</a></li>
+            <li><a href="../css-voorbeelden/07-ruimte.html">Ruimte</a></li>
+            <li><a href="../css-voorbeelden/08-randen.html">Randen</a></li>
+            <li><a href="../css-voorbeelden/09-kleuren.html">Kleuren</a></li>
+            <li><a href="../css-voorbeelden/10-eenheden.html">Eenheden</a></li>
+            <li><a href="../css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" class="active">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PORTFOLIO INHOUD ===== -->
+  <div class="portfolio" id="top">
+
+    <!-- Stap 1: Portfolio Header -->
+    <header class="portfolio-header">
+      <h1>Jan Janssens</h1>
+      <p>IoT Student - KdG Hogeschool</p>
+    </header>
+
+    <!-- Stap 2: Portfolio Navigatie -->
+    <nav class="portfolio-nav">
+      <ul>
+        <li><a href="#over-mij">Over Mij</a></li>
+        <li><a href="#hobbys">Hobby's</a></li>
+        <li><a href="#vaardigheden">Vaardigheden</a></li>
+        <li><a href="#projecten">Projecten</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Stap 3 & 4: Profiel sectie met afbeelding en tekst -->
+    <main class="portfolio-main">
+      <section id="over-mij" class="portfolio-section">
+        <h2>Over Mij</h2>
+        <div class="profiel">
+          <img src="../images/placeholder-profiel.jpg" alt="Profielfoto van Jan Janssens" width="200" height="200" class="profiel-foto">
+          <div class="profiel-tekst">
+            <p>Hallo! Ik ben <strong>Jan Janssens</strong>, een enthousiaste tweedejaarsstudent Internet of Things aan de KdG Hogeschool in Antwerpen. Ik heb een passie voor technologie en ben altijd op zoek naar nieuwe manieren om de digitale en fysieke wereld met elkaar te verbinden.</p>
+            <p>Tijdens mijn opleiding heb ik geleerd om te werken met microcontrollers, sensoren en webapplicaties. Ik geniet ervan om creatieve oplossingen te bedenken voor alledaagse problemen met behulp van slimme technologie.</p>
+            <p>In mijn vrije tijd werk ik graag aan persoonlijke projecten, zoals het bouwen van een slim domoticasysteem voor mijn studentenkamer. Ik geloof dat de toekomst van technologie ligt in het verbinden van alledaagse voorwerpen met het internet.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stap 5: Hobby's met ongeordende lijst -->
+      <section id="hobbys" class="portfolio-section">
+        <h2>Hobby's</h2>
+        <ul class="hobby-lijst">
+          <li>Programmeren</li>
+          <li>3D Printen</li>
+          <li>Elektronica</li>
+          <li>Fietsen</li>
+          <li>Koken</li>
+        </ul>
+      </section>
+
+      <!-- Stap 6: Vaardigheden met geordende lijst -->
+      <section id="vaardigheden" class="portfolio-section">
+        <h2>Vaardigheden</h2>
+        <p>Mijn technische vaardigheden, gerangschikt van sterkst naar in ontwikkeling:</p>
+        <ol class="vaardigheden-lijst">
+          <li>HTML &amp; CSS</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Arduino</li>
+          <li>Soldering</li>
+        </ol>
+      </section>
+
+      <!-- Stap 7: Projecten showcase met afbeelding -->
+      <section id="projecten" class="portfolio-section">
+        <h2>Projecten</h2>
+        <div class="project-showcase">
+          <img src="../images/voorbeeld-landschap.jpg" alt="Slim weerstation project" class="project-afbeelding">
+          <div class="project-beschrijving">
+            <h3>Slim Weerstation</h3>
+            <p>Voor mijn semesterproject heb ik een slim weerstation gebouwd met een <strong>Arduino Mega</strong> en verschillende sensoren. Het station meet temperatuur, luchtvochtigheid, luchtdruk en windsnelheid. Alle gegevens worden via <em>Wi-Fi</em> naar een webdashboard gestuurd waar je real-time grafieken kunt bekijken.</p>
+            <p>Gebruikte technologieen: Arduino, DHT22 sensor, BMP280 barometer, ESP8266 Wi-Fi module, HTML/CSS/JavaScript voor het dashboard.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Stap 8: Contact sectie in footer -->
+    <footer id="contact" class="portfolio-footer">
+      <h2>Contact</h2>
+      <p>Wil je meer weten over mijn projecten of samenwerken? Neem gerust contact op!</p>
+      <p>E-mail: <a href="mailto:jan.janssens@student.kdg.be">jan.janssens@student.kdg.be</a></p>
+      <a href="#top" class="terug-naar-boven">Terug naar boven</a>
+    </footer>
+
+  </div>
+
+  <!-- Link terug naar overzicht -->
+  <p style="text-align: center; padding: 1rem;"><a href="../index.html">&larr; Terug naar alle voorbeelden</a></p>
+
+</body>
+</html>

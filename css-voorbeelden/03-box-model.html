@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model - HTML &amp; CSS Voorbeelden</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/code-display.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo">HTML &amp; CSS</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#">HTML &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="../html/01-basis-template.html">Basis Template</a></li>
+            <li><a href="../html/02-koppen.html">Koppen</a></li>
+            <li><a href="../html/03-tekst-elementen.html">Tekst Elementen</a></li>
+            <li><a href="../html/04-lijsten.html">Lijsten</a></li>
+            <li><a href="../html/05-links.html">Links</a></li>
+            <li><a href="../html/06-afbeeldingen.html">Afbeeldingen</a></li>
+            <li><a href="../html/07-semantische-elementen.html">Semantische Elementen</a></li>
+            <li><a href="../html/08-div-en-span.html">Div &amp; Span</a></li>
+            <li><a href="../html/09-alles-samen.html">Alles Samen</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#">CSS &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="01-css-toepassen.html">CSS Toepassen</a></li>
+            <li><a href="02-selectors.html">Selectors</a></li>
+            <li><a href="03-box-model.html">Box Model</a></li>
+            <li><a href="04-typografie.html">Typografie</a></li>
+            <li><a href="05-achtergrond.html">Achtergrond</a></li>
+            <li><a href="06-grootte.html">Grootte</a></li>
+            <li><a href="07-ruimte.html">Ruimte</a></li>
+            <li><a href="08-randen.html">Randen</a></li>
+            <li><a href="09-kleuren.html">Kleuren</a></li>
+            <li><a href="10-eenheden.html">Eenheden</a></li>
+            <li><a href="11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
+          </ul>
+        </li>
+        <li><a href="../portfolio/index.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> <span>&rsaquo;</span> CSS <span>&rsaquo;</span> Box Model
+  </div>
+
+  <main class="page-container">
+    <h1 class="page-title">Box Model</h1>
+    <p class="page-description">Elk HTML-element is een rechthoekige box met content, padding, border en margin.</p>
+
+    <!-- Voorbeeld 1: Visueel Box Model Diagram -->
+    <section class="example-section">
+      <h2>Box Model Diagram</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <div style="background: #ffcdd2; padding: 20px; text-align: center; font-family: monospace; font-size: 0.85rem; border-radius: 4px;">
+            <span style="color: #c62828;">margin</span>
+            <div style="background: #ef9a9a; border: 3px solid #c62828; padding: 15px; margin-top: 8px; border-radius: 4px;">
+              <span style="color: #b71c1c;">border</span>
+              <div style="background: #fff9c4; padding: 20px; margin-top: 8px; border-radius: 4px;">
+                <span style="color: #f57f17;">padding</span>
+                <div style="background: #c8e6c9; padding: 10px; margin-top: 8px; border-radius: 4px;">
+                  <span style="color: #2e7d32; font-weight: bold;">content</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* Elk element heeft deze lagen: */
+
+/* 1. Content - de inhoud (tekst, afbeelding) */
+/* 2. Padding - ruimte rond de content */
+/* 3. Border  - rand rond de padding */
+/* 4. Margin  - ruimte buiten de border */
+
+div {
+  margin: 20px;     /* buitenste laag */
+  border: 3px solid black;
+  padding: 20px;
+  /* content past zich aan */
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 2: Box Model Properties -->
+    <section class="example-section">
+      <h2>Box Model Properties</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .box-demo-styled {
+              width: 250px;
+              padding: 20px;
+              border: 3px solid #1565c0;
+              margin: 15px 0;
+              background-color: #e3f2fd;
+              color: #0d47a1;
+              font-family: sans-serif;
+            }
+          </style>
+          <div class="box-demo-styled">
+            Dit is een box met width, padding, border en margin.
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">.box {
+  width: 250px;           /* breedte van de content */
+  padding: 20px;          /* ruimte binnen de border */
+  border: 3px solid #1565c0; /* rand */
+  margin: 15px 0;         /* ruimte buiten de border */
+  background-color: #e3f2fd;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voorbeeld 3: Totale Breedte Berekening -->
+    <section class="example-section">
+      <h2>Totale Breedte Berekenen</h2>
+      <div class="example-split">
+        <div class="example-result">
+          <style>
+            .box-calc-container {
+              font-family: sans-serif;
+              font-size: 0.9rem;
+            }
+            .box-calc-a {
+              width: 200px;
+              padding: 20px;
+              border: 2px solid #c62828;
+              background-color: #ffebee;
+              color: #b71c1c;
+              margin-bottom: 15px;
+            }
+            .box-calc-b {
+              width: 244px;
+              padding: 0;
+              border: 0;
+              background-color: #e8f5e9;
+              color: #1b5e20;
+            }
+          </style>
+          <div class="box-calc-container">
+            <div class="box-calc-a">
+              width: 200px<br>
+              padding: 20px (links + rechts)<br>
+              border: 2px (links + rechts)<br>
+              <strong>Totaal: 244px</strong>
+            </div>
+            <div class="box-calc-b">
+              <div style="width: 244px; height: 20px; background: #a5d6a7; text-align: center; line-height: 20px; font-size: 0.8rem;">
+                &larr; 244px &rarr;
+              </div>
+            </div>
+            <p style="margin-top: 10px; color: #555;">Beide boxes zijn visueel even breed: 200 + 20 + 20 + 2 + 2 = <strong>244px</strong></p>
+          </div>
+        </div>
+        <div class="example-code">
+          <pre><code class="language-css">/* Box A */
+.box-a {
+  width: 200px;
+  padding: 20px;      /* 20 links + 20 rechts */
+  border: 2px solid;  /* 2 links + 2 rechts */
+}
+
+/* Totale breedte berekening:
+   200 (width)
+ +  20 (padding-left)
+ +  20 (padding-right)
+ +   2 (border-left)
+ +   2 (border-right)
+ = 244px totaal */
+
+/* Box B - zelfde visuele breedte */
+.box-b {
+  width: 244px;
+  padding: 0;
+  border: 0;
+}
+/* Totaal: 244px */</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="example-section">
+      <h2>Belangrijk</h2>
+      <p><strong>De totale breedte van een element = width + padding-left + padding-right + border-left + border-right.</strong> Zie ook <code>box-sizing: border-box</code> om de berekening eenvoudiger te maken!</p>
+    </section>
+
+    <nav class="page-nav">
+      <a href="02-selectors.html" class="prev">&larr; Selectors</a>
+      <a href="04-typografie.html" class="next">Typografie &rarr;</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>HTML &amp; CSS Voorbeelden - KdG Hogeschool - IoT</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+</html>
