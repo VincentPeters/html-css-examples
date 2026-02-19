@@ -351,6 +351,29 @@ a:hover {
   color: #74c0fc;
 }
 
+/* === LEARN MORE LINKS === */
+.learn-more {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.learn-more a {
+  color: #0077b6;
+  text-decoration: none;
+  border-bottom: 1px dashed #0077b6;
+}
+
+.learn-more a:hover {
+  color: #023e8a;
+  border-bottom-style: solid;
+  text-decoration: none;
+}
+
+.learn-more a + a {
+  margin-left: 1rem;
+}
+
 /* === UTILITY === */
 .visually-hidden {
   position: absolute;
