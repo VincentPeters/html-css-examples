@@ -1,541 +1,727 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML & CSS Voorbeelden - KdG Hogeschool</title>
-  <link rel="stylesheet" href="css/main.css">
-  <style>
-    .hero {
-      background-color: #1a1a2e;
-      color: #fff;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .hero h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      color: #adb5bd;
-    }
-
-    .home-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1rem 3rem;
-    }
-
-    .home-section {
-      margin-bottom: 2.5rem;
-    }
-
-    .home-section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #dee2e6;
-    }
-
-    .home-section-title .badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.15rem 0.5rem;
-      border-radius: 3px;
-      margin-left: 0.5rem;
-      vertical-align: middle;
-      position: relative;
-      top: -1px;
-    }
-
-    .badge-html { background-color: #0077b6; color: #fff; }
-    .badge-css { background-color: #e85d04; color: #fff; }
-    .badge-portfolio { background-color: #2d6a4f; color: #fff; }
-
-    .home-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-
-    .home-card {
-      display: block;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1.25rem;
-      text-decoration: none;
-      color: inherit;
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-
-    .home-card:hover {
-      border-color: #0077b6;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .home-card.css-card:hover {
-      border-color: #e85d04;
-    }
-
-    .home-card.portfolio-card:hover {
-      border-color: #2d6a4f;
-    }
-
-    .home-card-header {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .home-card-num {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: #fff;
-      background: #0077b6;
-      width: 1.6rem;
-      height: 1.6rem;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .css-card .home-card-num {
-      background: #e85d04;
-    }
-
-    .portfolio-card .home-card-num {
-      background: #2d6a4f;
-    }
-
-    .home-card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #1a1a2e;
-    }
-
-    .home-card-desc {
-      font-size: 0.85rem;
-      color: #6c757d;
-      line-height: 1.45;
-      margin-bottom: 0.65rem;
-    }
-
-    .home-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-    }
-
-    .home-card-tag {
-      font-size: 0.7rem;
-      font-family: "Fira Code", "Consolas", monospace;
-      background: #f1f3f5;
-      color: #495057;
-      padding: 0.1rem 0.4rem;
-      border-radius: 3px;
-    }
-
-    .portfolio-wide {
-      grid-column: 1 / -1;
-    }
-
-    @media (max-width: 768px) {
-      .home-grid {
-        grid-template-columns: repeat(2, 1fr);
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>HTML & CSS Voorbeelden - KdG Hogeschool</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      .hero {
+        background-color: #1a1a2e;
+        color: #fff;
+        text-align: center;
+        padding: 3rem 1rem;
       }
 
       .hero h1 {
-        font-size: 1.75rem;
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #fff;
       }
-    }
 
-    @media (max-width: 480px) {
+      .hero p {
+        font-size: 1.05rem;
+        color: #adb5bd;
+      }
+
+      .home-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+
+      .home-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .home-section-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #dee2e6;
+      }
+
+      .home-section-title .badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.15rem 0.5rem;
+        border-radius: 3px;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+      }
+
+      .badge-html {
+        background-color: #0077b6;
+        color: #fff;
+      }
+      .badge-css {
+        background-color: #e85d04;
+        color: #fff;
+      }
+      .badge-portfolio {
+        background-color: #2d6a4f;
+        color: #fff;
+      }
+
       .home-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <header class="site-header">
-    <nav class="nav-container">
-      <a href="index.html" class="nav-logo">HTML &amp; CSS</a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li class="nav-dropdown">
-          <a href="#">HTML ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="html/01-basis-template.html">Basis Template</a></li>
-            <li><a href="html/02-koppen.html">Koppen</a></li>
-            <li><a href="html/03-tekst-elementen.html">Tekst Elementen</a></li>
-            <li><a href="html/04-lijsten.html">Lijsten</a></li>
-            <li><a href="html/05-links.html">Links</a></li>
-            <li><a href="html/06-afbeeldingen.html">Afbeeldingen</a></li>
-            <li><a href="html/07-semantische-elementen.html">Semantische Elementen</a></li>
-            <li><a href="html/08-div-en-span.html">Div &amp; Span</a></li>
-            <li><a href="html/09-alles-samen.html">Alles Samen</a></li>
-          </ul>
-        </li>
-        <li class="nav-dropdown">
-          <a href="#">CSS ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="css-voorbeelden/01-css-toepassen.html">CSS Toepassen</a></li>
-            <li><a href="css-voorbeelden/02-selectors.html">Selectors</a></li>
-            <li><a href="css-voorbeelden/03-box-model.html">Box Model</a></li>
-            <li><a href="css-voorbeelden/04-typografie.html">Typografie</a></li>
-            <li><a href="css-voorbeelden/05-achtergrond.html">Achtergrond</a></li>
-            <li><a href="css-voorbeelden/06-grootte.html">Grootte</a></li>
-            <li><a href="css-voorbeelden/07-ruimte.html">Ruimte</a></li>
-            <li><a href="css-voorbeelden/08-randen.html">Randen</a></li>
-            <li><a href="css-voorbeelden/09-kleuren.html">Kleuren</a></li>
-            <li><a href="css-voorbeelden/10-eenheden.html">Eenheden</a></li>
-            <li><a href="css-voorbeelden/11-reset-box-sizing.html">Reset &amp; Box-sizing</a></li>
-          </ul>
-        </li>
-        <li><a href="portfolio/index.html">Portfolio</a></li>
-      </ul>
-    </nav>
-  </header>
+      .home-card {
+        display: block;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.25rem;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          box-shadow 0.2s,
+          border-color 0.2s;
+      }
 
-  <section class="hero">
-    <h1>HTML &amp; CSS Voorbeelden</h1>
-    <p>Praktische voorbeelden bij elke les &mdash; KdG Hogeschool, IoT</p>
-    <p style="margin-top: 1rem;"><a href="https://github.com/VincentPeters/html-css-examples" style="color: #74c0fc; font-size: 0.9rem;">Bekijk broncode op GitHub</a></p>
-  </section>
+      .home-card:hover {
+        border-color: #0077b6;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        text-decoration: none;
+        color: inherit;
+      }
 
-  <main class="home-content">
+      .home-card.css-card:hover {
+        border-color: #e85d04;
+      }
 
-    <section class="home-section">
-      <h2 class="home-section-title">HTML <span class="badge badge-html">9 voorbeelden</span></h2>
-      <div class="home-grid">
+      .home-card.portfolio-card:hover {
+        border-color: #2d6a4f;
+      }
 
-        <a href="html/01-basis-template.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">01</span>
-            <span class="home-card-title">Basis Template</span>
-          </div>
-          <p class="home-card-desc">De standaard HTML5-structuur die elke webpagina nodig heeft.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">&lt;!DOCTYPE&gt;</span>
-            <span class="home-card-tag">&lt;head&gt;</span>
-            <span class="home-card-tag">&lt;body&gt;</span>
-            <span class="home-card-tag">meta</span>
-          </div>
-        </a>
+      .home-card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.5rem;
+      }
 
-        <a href="html/02-koppen.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">02</span>
-            <span class="home-card-title">Koppen</span>
-          </div>
-          <p class="home-card-desc">Zes niveaus van koppen en hoe je ze correct hiërarchisch gebruikt.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">&lt;h1&gt;</span>
-            <span class="home-card-tag">&lt;h2&gt;</span>
-            <span class="home-card-tag">&lt;h3&gt;</span>
-            <span class="home-card-tag">&lt;h4&gt;</span>
-            <span class="home-card-tag">&lt;h5&gt;</span>
-            <span class="home-card-tag">&lt;h6&gt;</span>
-          </div>
-        </a>
+      .home-card-num {
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #fff;
+        background: #0077b6;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
 
-        <a href="html/03-tekst-elementen.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">03</span>
-            <span class="home-card-title">Tekst Elementen</span>
-          </div>
-          <p class="home-card-desc">Paragrafen, vetgedrukte tekst, cursief en regeleindes.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">&lt;p&gt;</span>
-            <span class="home-card-tag">&lt;strong&gt;</span>
-            <span class="home-card-tag">&lt;em&gt;</span>
-            <span class="home-card-tag">&lt;br&gt;</span>
-          </div>
-        </a>
+      .css-card .home-card-num {
+        background: #e85d04;
+      }
 
-        <a href="html/04-lijsten.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">04</span>
-            <span class="home-card-title">Lijsten</span>
-          </div>
-          <p class="home-card-desc">Geordende en ongeordende lijsten, inclusief geneste lijsten.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">&lt;ul&gt;</span>
-            <span class="home-card-tag">&lt;ol&gt;</span>
-            <span class="home-card-tag">&lt;li&gt;</span>
-          </div>
-        </a>
+      .portfolio-card .home-card-num {
+        background: #2d6a4f;
+      }
 
-        <a href="html/05-links.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">05</span>
-            <span class="home-card-title">Links</span>
-          </div>
-          <p class="home-card-desc">Hyperlinks naar andere pagina's, externe sites en e-mailadressen.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">href</span>
-            <span class="home-card-tag">target="_blank"</span>
-            <span class="home-card-tag">mailto:</span>
-          </div>
-        </a>
+      .home-card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a1a2e;
+      }
 
-        <a href="html/06-afbeeldingen.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">06</span>
-            <span class="home-card-title">Afbeeldingen</span>
-          </div>
-          <p class="home-card-desc">Afbeeldingen toevoegen met het img-element en relatieve paden.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">&lt;img&gt;</span>
-            <span class="home-card-tag">src</span>
-            <span class="home-card-tag">alt</span>
-            <span class="home-card-tag">width</span>
-          </div>
-        </a>
+      .home-card-desc {
+        font-size: 0.85rem;
+        color: #6c757d;
+        line-height: 1.45;
+        margin-bottom: 0.65rem;
+      }
 
-        <a href="html/07-semantische-elementen.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">07</span>
-            <span class="home-card-title">Semantische Elementen</span>
-          </div>
-          <p class="home-card-desc">Elementen die betekenis geven aan de structuur van je pagina.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">&lt;header&gt;</span>
-            <span class="home-card-tag">&lt;main&gt;</span>
-            <span class="home-card-tag">&lt;section&gt;</span>
-            <span class="home-card-tag">&lt;footer&gt;</span>
-          </div>
-        </a>
+      .home-card-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+      }
 
-        <a href="html/08-div-en-span.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">08</span>
-            <span class="home-card-title">Div &amp; Span</span>
-          </div>
-          <p class="home-card-desc">Het verschil tussen block- en inline-elementen voor groepering.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">&lt;div&gt;</span>
-            <span class="home-card-tag">&lt;span&gt;</span>
-            <span class="home-card-tag">block</span>
-            <span class="home-card-tag">inline</span>
-          </div>
-        </a>
+      .home-card-tag {
+        font-size: 0.7rem;
+        font-family: 'Fira Code', 'Consolas', monospace;
+        background: #f1f3f5;
+        color: #495057;
+        padding: 0.1rem 0.4rem;
+        border-radius: 3px;
+      }
 
-        <a href="html/09-alles-samen.html" class="home-card">
-          <div class="home-card-header">
-            <span class="home-card-num">09</span>
-            <span class="home-card-title">Alles Samen</span>
-          </div>
-          <p class="home-card-desc">Eén volledig voorbeeld dat alle geleerde HTML-elementen combineert.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">alles</span>
-            <span class="home-card-tag">gecombineerd</span>
-          </div>
-        </a>
+      .portfolio-wide {
+        grid-column: 1 / -1;
+      }
 
-      </div>
+      @media (max-width: 768px) {
+        .home-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero h1 {
+          font-size: 1.75rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .home-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-container">
+        <a href="index.html" class="nav-logo">HTML &amp; CSS</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label"
+          ><span></span
+        ></label>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="nav-dropdown">
+            <a href="#">HTML ▾</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="html/01-basis-template.html"
+                  >Basis Template</a
+                >
+              </li>
+              <li><a href="html/02-koppen.html">Koppen</a></li>
+              <li>
+                <a href="html/03-tekst-elementen.html"
+                  >Tekst Elementen</a
+                >
+              </li>
+              <li><a href="html/04-lijsten.html">Lijsten</a></li>
+              <li><a href="html/05-links.html">Links</a></li>
+              <li>
+                <a href="html/06-afbeeldingen.html">Afbeeldingen</a>
+              </li>
+              <li>
+                <a href="html/07-semantische-elementen.html"
+                  >Semantische Elementen</a
+                >
+              </li>
+              <li>
+                <a href="html/08-div-en-span.html">Div &amp; Span</a>
+              </li>
+              <li>
+                <a href="html/09-alles-samen.html">Alles Samen</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="#">CSS ▾</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="css-voorbeelden/01-css-toepassen.html"
+                  >CSS Toepassen</a
+                >
+              </li>
+              <li>
+                <a href="css-voorbeelden/02-selectors.html"
+                  >Selectors</a
+                >
+              </li>
+              <li>
+                <a href="css-voorbeelden/03-box-model.html"
+                  >Box Model</a
+                >
+              </li>
+              <li>
+                <a href="css-voorbeelden/04-typografie.html"
+                  >Typografie</a
+                >
+              </li>
+              <li>
+                <a href="css-voorbeelden/05-achtergrond.html"
+                  >Achtergrond</a
+                >
+              </li>
+              <li>
+                <a href="css-voorbeelden/06-grootte.html">Grootte</a>
+              </li>
+              <li>
+                <a href="css-voorbeelden/07-ruimte.html">Ruimte</a>
+              </li>
+              <li>
+                <a href="css-voorbeelden/08-randen.html">Randen</a>
+              </li>
+              <li>
+                <a href="css-voorbeelden/09-kleuren.html">Kleuren</a>
+              </li>
+              <li>
+                <a href="css-voorbeelden/10-eenheden.html"
+                  >Eenheden</a
+                >
+              </li>
+              <li>
+                <a href="css-voorbeelden/11-reset-box-sizing.html"
+                  >Reset &amp; Box-sizing</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="portfolio/index.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>HTML &amp; CSS Voorbeelden</h1>
+      <p>
+        Praktische voorbeelden bij de lessen HTML en CSS &mdash; KdG
+        Hogeschool, IoT
+      </p>
+      <p style="margin-top: 1rem">
+        <a
+          href="https://github.com/VincentPeters/html-css-examples"
+          style="color: #74c0fc; font-size: 0.9rem"
+          >Bekijk broncode op GitHub</a
+        >
+      </p>
     </section>
 
-    <section class="home-section">
-      <h2 class="home-section-title">CSS <span class="badge badge-css">11 voorbeelden</span></h2>
-      <div class="home-grid">
+    <main class="home-content">
+      <section class="home-section">
+        <h2 class="home-section-title">
+          HTML <span class="badge badge-html">9 voorbeelden</span>
+        </h2>
+        <div class="home-grid">
+          <a href="html/01-basis-template.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">01</span>
+              <span class="home-card-title">Basis Template</span>
+            </div>
+            <p class="home-card-desc">
+              De standaard HTML5-structuur die elke webpagina nodig
+              heeft.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">&lt;!DOCTYPE&gt;</span>
+              <span class="home-card-tag">&lt;head&gt;</span>
+              <span class="home-card-tag">&lt;body&gt;</span>
+              <span class="home-card-tag">meta</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/01-css-toepassen.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">01</span>
-            <span class="home-card-title">CSS Toepassen</span>
-          </div>
-          <p class="home-card-desc">Drie manieren om CSS toe te passen op je HTML-pagina.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">inline</span>
-            <span class="home-card-tag">&lt;style&gt;</span>
-            <span class="home-card-tag">&lt;link&gt;</span>
-          </div>
-        </a>
+          <a href="html/02-koppen.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">02</span>
+              <span class="home-card-title">Koppen</span>
+            </div>
+            <p class="home-card-desc">
+              Zes niveaus van koppen en hoe je ze correct hiërarchisch
+              gebruikt.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">&lt;h1&gt;</span>
+              <span class="home-card-tag">&lt;h2&gt;</span>
+              <span class="home-card-tag">&lt;h3&gt;</span>
+              <span class="home-card-tag">&lt;h4&gt;</span>
+              <span class="home-card-tag">&lt;h5&gt;</span>
+              <span class="home-card-tag">&lt;h6&gt;</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/02-selectors.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">02</span>
-            <span class="home-card-title">Selectors</span>
-          </div>
-          <p class="home-card-desc">Selecteer elementen op basis van type, class, ID of positie.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">p { }</span>
-            <span class="home-card-tag">.class</span>
-            <span class="home-card-tag">#id</span>
-            <span class="home-card-tag">descendant</span>
-          </div>
-        </a>
+          <a href="html/03-tekst-elementen.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">03</span>
+              <span class="home-card-title">Tekst Elementen</span>
+            </div>
+            <p class="home-card-desc">
+              Paragrafen, vetgedrukte tekst, cursief en regeleindes.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">&lt;p&gt;</span>
+              <span class="home-card-tag">&lt;strong&gt;</span>
+              <span class="home-card-tag">&lt;em&gt;</span>
+              <span class="home-card-tag">&lt;br&gt;</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/03-box-model.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">03</span>
-            <span class="home-card-title">Box Model</span>
-          </div>
-          <p class="home-card-desc">Visuele uitleg van content, padding, border en margin.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">content</span>
-            <span class="home-card-tag">padding</span>
-            <span class="home-card-tag">border</span>
-            <span class="home-card-tag">margin</span>
-          </div>
-        </a>
+          <a href="html/04-lijsten.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">04</span>
+              <span class="home-card-title">Lijsten</span>
+            </div>
+            <p class="home-card-desc">
+              Geordende en ongeordende lijsten, inclusief geneste
+              lijsten.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">&lt;ul&gt;</span>
+              <span class="home-card-tag">&lt;ol&gt;</span>
+              <span class="home-card-tag">&lt;li&gt;</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/04-typografie.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">04</span>
-            <span class="home-card-title">Typografie</span>
-          </div>
-          <p class="home-card-desc">Tekst opmaken met kleur, lettertype, grootte en uitlijning.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">color</span>
-            <span class="home-card-tag">font-family</span>
-            <span class="home-card-tag">font-size</span>
-            <span class="home-card-tag">text-align</span>
-          </div>
-        </a>
+          <a href="html/05-links.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">05</span>
+              <span class="home-card-title">Links</span>
+            </div>
+            <p class="home-card-desc">
+              Hyperlinks naar andere pagina's, externe sites en
+              e-mailadressen.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">href</span>
+              <span class="home-card-tag">target="_blank"</span>
+              <span class="home-card-tag">mailto:</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/05-achtergrond.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">05</span>
-            <span class="home-card-title">Achtergrond</span>
-          </div>
-          <p class="home-card-desc">Achtergrondkleuren en achtergrondafbeeldingen instellen.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">background-color</span>
-            <span class="home-card-tag">background-image</span>
-          </div>
-        </a>
+          <a href="html/06-afbeeldingen.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">06</span>
+              <span class="home-card-title">Afbeeldingen</span>
+            </div>
+            <p class="home-card-desc">
+              Afbeeldingen toevoegen met het img-element en relatieve
+              paden.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">&lt;img&gt;</span>
+              <span class="home-card-tag">src</span>
+              <span class="home-card-tag">alt</span>
+              <span class="home-card-tag">width</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/06-grootte.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">06</span>
-            <span class="home-card-title">Grootte</span>
-          </div>
-          <p class="home-card-desc">Afmetingen van elementen instellen voor responsief design.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">width</span>
-            <span class="home-card-tag">height</span>
-            <span class="home-card-tag">max-width</span>
-          </div>
-        </a>
+          <a
+            href="html/07-semantische-elementen.html"
+            class="home-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">07</span>
+              <span class="home-card-title"
+                >Semantische Elementen</span
+              >
+            </div>
+            <p class="home-card-desc">
+              Elementen die betekenis geven aan de structuur van je
+              pagina.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">&lt;header&gt;</span>
+              <span class="home-card-tag">&lt;main&gt;</span>
+              <span class="home-card-tag">&lt;section&gt;</span>
+              <span class="home-card-tag">&lt;footer&gt;</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/07-ruimte.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">07</span>
-            <span class="home-card-title">Ruimte</span>
-          </div>
-          <p class="home-card-desc">Ruimte rond en binnen elementen, en horizontaal centreren.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">margin</span>
-            <span class="home-card-tag">padding</span>
-            <span class="home-card-tag">margin: 0 auto</span>
-          </div>
-        </a>
+          <a href="html/08-div-en-span.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">08</span>
+              <span class="home-card-title">Div &amp; Span</span>
+            </div>
+            <p class="home-card-desc">
+              Het verschil tussen block- en inline-elementen voor
+              groepering.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">&lt;div&gt;</span>
+              <span class="home-card-tag">&lt;span&gt;</span>
+              <span class="home-card-tag">block</span>
+              <span class="home-card-tag">inline</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/08-randen.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">08</span>
-            <span class="home-card-title">Randen</span>
-          </div>
-          <p class="home-card-desc">Randstijlen, diktes, kleuren en afgeronde hoeken.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">solid</span>
-            <span class="home-card-tag">dashed</span>
-            <span class="home-card-tag">dotted</span>
-            <span class="home-card-tag">border-radius</span>
-          </div>
-        </a>
+          <a href="html/09-alles-samen.html" class="home-card">
+            <div class="home-card-header">
+              <span class="home-card-num">09</span>
+              <span class="home-card-title">Alles Samen</span>
+            </div>
+            <p class="home-card-desc">
+              Eén volledig voorbeeld dat alle geleerde HTML-elementen
+              combineert.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">alles</span>
+              <span class="home-card-tag">gecombineerd</span>
+            </div>
+          </a>
+        </div>
+      </section>
 
-        <a href="css-voorbeelden/09-kleuren.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">09</span>
-            <span class="home-card-title">Kleuren</span>
-          </div>
-          <p class="home-card-desc">Vier manieren om kleuren te definiëren, inclusief transparantie.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">namen</span>
-            <span class="home-card-tag">#hex</span>
-            <span class="home-card-tag">rgb()</span>
-            <span class="home-card-tag">rgba()</span>
-          </div>
-        </a>
+      <section class="home-section">
+        <h2 class="home-section-title">
+          CSS <span class="badge badge-css">11 voorbeelden</span>
+        </h2>
+        <div class="home-grid">
+          <a
+            href="css-voorbeelden/01-css-toepassen.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">01</span>
+              <span class="home-card-title">CSS Toepassen</span>
+            </div>
+            <p class="home-card-desc">
+              Drie manieren om CSS toe te passen op je HTML-pagina.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">inline</span>
+              <span class="home-card-tag">&lt;style&gt;</span>
+              <span class="home-card-tag">&lt;link&gt;</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/10-eenheden.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">10</span>
-            <span class="home-card-title">Eenheden</span>
-          </div>
-          <p class="home-card-desc">Vergelijking van absolute en relatieve eenheden.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">px</span>
-            <span class="home-card-tag">%</span>
-            <span class="home-card-tag">em</span>
-            <span class="home-card-tag">rem</span>
-          </div>
-        </a>
+          <a
+            href="css-voorbeelden/02-selectors.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">02</span>
+              <span class="home-card-title">Selectors</span>
+            </div>
+            <p class="home-card-desc">
+              Selecteer elementen op basis van type, class, ID of
+              positie.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">p { }</span>
+              <span class="home-card-tag">.class</span>
+              <span class="home-card-tag">#id</span>
+              <span class="home-card-tag">descendant</span>
+            </div>
+          </a>
 
-        <a href="css-voorbeelden/11-reset-box-sizing.html" class="home-card css-card">
-          <div class="home-card-header">
-            <span class="home-card-num">11</span>
-            <span class="home-card-title">Reset &amp; Box-sizing</span>
-          </div>
-          <p class="home-card-desc">CSS reset en box-sizing: border-box voor voorspelbare layouts.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">* { }</span>
-            <span class="home-card-tag">box-sizing</span>
-            <span class="home-card-tag">border-box</span>
-          </div>
-        </a>
+          <a
+            href="css-voorbeelden/03-box-model.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">03</span>
+              <span class="home-card-title">Box Model</span>
+            </div>
+            <p class="home-card-desc">
+              Visuele uitleg van content, padding, border en margin.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">content</span>
+              <span class="home-card-tag">padding</span>
+              <span class="home-card-tag">border</span>
+              <span class="home-card-tag">margin</span>
+            </div>
+          </a>
 
-      </div>
-    </section>
+          <a
+            href="css-voorbeelden/04-typografie.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">04</span>
+              <span class="home-card-title">Typografie</span>
+            </div>
+            <p class="home-card-desc">
+              Tekst opmaken met kleur, lettertype, grootte en
+              uitlijning.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">color</span>
+              <span class="home-card-tag">font-family</span>
+              <span class="home-card-tag">font-size</span>
+              <span class="home-card-tag">text-align</span>
+            </div>
+          </a>
 
-    <section class="home-section">
-      <h2 class="home-section-title">Portfolio <span class="badge badge-portfolio">eindproject</span></h2>
-      <div class="home-grid">
-        <a href="portfolio/index.html" class="home-card portfolio-card portfolio-wide">
-          <div class="home-card-header">
-            <span class="home-card-num">&#10003;</span>
-            <span class="home-card-title">Compleet Portfolio</span>
-          </div>
-          <p class="home-card-desc">Alle 14 oefenstappen gecombineerd in een volledig gestyled portfolio. Bevat header, profielsectie, hobby's, vaardigheden, projecten en een contactformulier.</p>
-          <div class="home-card-tags">
-            <span class="home-card-tag">header</span>
-            <span class="home-card-tag">profiel</span>
-            <span class="home-card-tag">lijsten</span>
-            <span class="home-card-tag">afbeeldingen</span>
-            <span class="home-card-tag">links</span>
-            <span class="home-card-tag">externe CSS</span>
-          </div>
-        </a>
-      </div>
-    </section>
+          <a
+            href="css-voorbeelden/05-achtergrond.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">05</span>
+              <span class="home-card-title">Achtergrond</span>
+            </div>
+            <p class="home-card-desc">
+              Achtergrondkleuren en achtergrondafbeeldingen instellen.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">background-color</span>
+              <span class="home-card-tag">background-image</span>
+            </div>
+          </a>
 
-  </main>
+          <a
+            href="css-voorbeelden/06-grootte.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">06</span>
+              <span class="home-card-title">Grootte</span>
+            </div>
+            <p class="home-card-desc">
+              Afmetingen van elementen instellen voor responsief
+              design.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">width</span>
+              <span class="home-card-tag">height</span>
+              <span class="home-card-tag">max-width</span>
+            </div>
+          </a>
 
-  <footer class="site-footer">
-    <p>HTML &amp; CSS Voorbeelden &mdash; KdG Hogeschool &mdash; IoT &mdash; <a href="https://github.com/VincentPeters/html-css-examples">GitHub</a></p>
-  </footer>
+          <a
+            href="css-voorbeelden/07-ruimte.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">07</span>
+              <span class="home-card-title">Ruimte</span>
+            </div>
+            <p class="home-card-desc">
+              Ruimte rond en binnen elementen, en horizontaal
+              centreren.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">margin</span>
+              <span class="home-card-tag">padding</span>
+              <span class="home-card-tag">margin: 0 auto</span>
+            </div>
+          </a>
 
-</body>
+          <a
+            href="css-voorbeelden/08-randen.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">08</span>
+              <span class="home-card-title">Randen</span>
+            </div>
+            <p class="home-card-desc">
+              Randstijlen, diktes, kleuren en afgeronde hoeken.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">solid</span>
+              <span class="home-card-tag">dashed</span>
+              <span class="home-card-tag">dotted</span>
+              <span class="home-card-tag">border-radius</span>
+            </div>
+          </a>
+
+          <a
+            href="css-voorbeelden/09-kleuren.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">09</span>
+              <span class="home-card-title">Kleuren</span>
+            </div>
+            <p class="home-card-desc">
+              Vier manieren om kleuren te definiëren, inclusief
+              transparantie.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">namen</span>
+              <span class="home-card-tag">#hex</span>
+              <span class="home-card-tag">rgb()</span>
+              <span class="home-card-tag">rgba()</span>
+            </div>
+          </a>
+
+          <a
+            href="css-voorbeelden/10-eenheden.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">10</span>
+              <span class="home-card-title">Eenheden</span>
+            </div>
+            <p class="home-card-desc">
+              Vergelijking van absolute en relatieve eenheden.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">px</span>
+              <span class="home-card-tag">%</span>
+              <span class="home-card-tag">em</span>
+              <span class="home-card-tag">rem</span>
+            </div>
+          </a>
+
+          <a
+            href="css-voorbeelden/11-reset-box-sizing.html"
+            class="home-card css-card"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">11</span>
+              <span class="home-card-title"
+                >Reset &amp; Box-sizing</span
+              >
+            </div>
+            <p class="home-card-desc">
+              CSS reset en box-sizing: border-box voor voorspelbare
+              layouts.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">* { }</span>
+              <span class="home-card-tag">box-sizing</span>
+              <span class="home-card-tag">border-box</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="home-section">
+        <h2 class="home-section-title">
+          Portfolio
+          <span class="badge badge-portfolio">eindproject</span>
+        </h2>
+        <div class="home-grid">
+          <a
+            href="portfolio/index.html"
+            class="home-card portfolio-card portfolio-wide"
+          >
+            <div class="home-card-header">
+              <span class="home-card-num">&#10003;</span>
+              <span class="home-card-title">Compleet Portfolio</span>
+            </div>
+            <p class="home-card-desc">
+              Alle 14 oefenstappen gecombineerd in een volledig
+              gestyled portfolio. Bevat header, profielsectie,
+              hobby's, vaardigheden, projecten en een
+              contactformulier.
+            </p>
+            <div class="home-card-tags">
+              <span class="home-card-tag">header</span>
+              <span class="home-card-tag">profiel</span>
+              <span class="home-card-tag">lijsten</span>
+              <span class="home-card-tag">afbeeldingen</span>
+              <span class="home-card-tag">links</span>
+              <span class="home-card-tag">externe CSS</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        HTML &amp; CSS Voorbeelden &mdash; KdG Hogeschool &mdash; IoT
+        &mdash;
+        <a href="https://github.com/VincentPeters/html-css-examples"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
