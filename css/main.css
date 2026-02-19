@@ -372,7 +372,8 @@ a:hover {
 }
 
 .learn-more-label::before {
-  content: "\2139\FE0F ";
+  content: "\2139\FE0F";
+  margin-right: 0.4rem;
 }
 
 .learn-more-links {
